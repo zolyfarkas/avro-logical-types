@@ -30,9 +30,6 @@
   </parent>
   <name>${project.artifactId}-${project.version}</name>
   <description>A bunch of additional avro logical types</description>
-  <properties>
-    <spf4j.version>8.9.2-SNAPSHOT</spf4j.version>
-  </properties>
 
   <scm>
     <connection>scm:git:https://github.com/zolyfarkas/avro-logical-types.git</connection>
