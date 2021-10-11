@@ -25,6 +25,9 @@ import org.apache.avro.Schema;
  */
 public class DecimalFactory implements LogicalTypeFactory {
 
+  private static final boolean officialFormalAsDefault
+          = Boolean.parseBoolean(System.getProperty("avro.defaultToStandardDecimalFormat", "true"));
+
   @Override
   public String getTypeName() {
     return "decimal";
@@ -36,7 +39,7 @@ public class DecimalFactory implements LogicalTypeFactory {
     Number precision = (Number) schema.getObjectProp("precision");
     if (schema.getType() == Schema.Type.FIXED
             ||  "official".equals(schema.getObjectProp("format"))
-            || Boolean.getBoolean("avro.defaultToStandardDecimalFormat")) {
+            || officialFormalAsDefault) {
       if (precision == null) { // we deviate here from avro and default to 36 instead of erroring out
         if (scale == null) {
           return LogicalTypes.decimal(36, 0);
