@@ -2,9 +2,25 @@
 package org.spf4j.avro.logical_types.converters;
 
 
+import com.fasterxml.jackson.core.JsonGenerator;
+import com.fasterxml.jackson.core.JsonParseException;
+import com.fasterxml.jackson.core.JsonParser;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.core.JsonToken;
+import com.fasterxml.jackson.databind.DeserializationContext;
+import com.fasterxml.jackson.databind.JsonDeserializer;
+import com.fasterxml.jackson.databind.JsonSerializer;
+import com.fasterxml.jackson.databind.SerializerProvider;
+import com.fasterxml.jackson.databind.module.SimpleModule;
 import java.io.IOException;
 import java.io.UncheckedIOException;
 import java.nio.ByteBuffer;
+import java.time.Duration;
+import java.time.Instant;
+import java.time.LocalDate;
+import java.time.Year;
+import java.time.YearMonth;
+import java.time.ZonedDateTime;
 import org.apache.avro.Conversion;
 import org.apache.avro.LogicalType;
 import org.apache.avro.Schema;
@@ -22,6 +38,125 @@ import org.apache.avro.util.Optional;
  * @author Zoltan Farkas
  */
 class JsonConversions<T> extends Conversion<T> {
+
+
+  static {
+    SimpleModule module = newJavaTimeModule();
+    Schema.MAPPER.registerModule(module);
+  }
+
+  public static SimpleModule newJavaTimeModule() {
+    SimpleModule module = new SimpleModule("extra");
+    module.addSerializer(Instant.class, new JsonSerializer<Instant>() {
+      @Override
+      public void serialize(final Instant instant, final JsonGenerator gen, final SerializerProvider sp)
+              throws IOException {
+        gen.writeString(instant.toString());
+      }
+    });
+    module.addDeserializer(Instant.class, new JsonDeserializer<Instant>() {
+      @Override
+      public Instant deserialize(final JsonParser parser, final DeserializationContext ctx)
+              throws IOException, JsonProcessingException {
+        if (parser.currentToken() == JsonToken.VALUE_STRING) {
+          return Instant.parse(parser.getText());
+        } else {
+          throw new JsonParseException(parser, "Expected instant as string, found " + parser.currentToken());
+        }
+      }
+    });
+    module.addSerializer(LocalDate.class, new JsonSerializer<LocalDate>() {
+      @Override
+      public void serialize(final LocalDate date, final JsonGenerator gen, final SerializerProvider sp)
+              throws IOException {
+        gen.writeString(date.toString());
+      }
+    });
+    module.addDeserializer(LocalDate.class, new JsonDeserializer<LocalDate>() {
+      @Override
+      public LocalDate deserialize(JsonParser parser, DeserializationContext ctx)
+              throws IOException, JsonProcessingException {
+        if (parser.currentToken() == JsonToken.VALUE_STRING) {
+          return LocalDate.parse(parser.getText());
+        } else {
+          throw new JsonParseException(parser, "Expected local date as string, found " + parser.currentToken());
+        }
+      }
+    });
+    module.addSerializer(Duration.class, new JsonSerializer<Duration>() {
+      @Override
+      public void serialize(final Duration date, final JsonGenerator gen, final SerializerProvider sp)
+              throws IOException {
+        gen.writeString(date.toString());
+      }
+    });
+    module.addDeserializer(Duration.class, new JsonDeserializer<Duration>() {
+      @Override
+      public Duration deserialize(JsonParser parser, DeserializationContext ctx)
+              throws IOException, JsonProcessingException {
+        if (parser.currentToken() == JsonToken.VALUE_STRING) {
+          return Duration.parse(parser.getText());
+        } else {
+          throw new JsonParseException(parser, "Expected duration as string, found " + parser.currentToken());
+        }
+      }
+    });
+    module.addSerializer(ZonedDateTime.class, new JsonSerializer<ZonedDateTime>() {
+      @Override
+      public void serialize(final ZonedDateTime date, final JsonGenerator gen, final SerializerProvider sp)
+              throws IOException {
+        gen.writeString(date.toString());
+      }
+    });
+    module.addDeserializer(ZonedDateTime.class, new JsonDeserializer<ZonedDateTime>() {
+      @Override
+      public ZonedDateTime deserialize(JsonParser parser, DeserializationContext ctx)
+              throws IOException, JsonProcessingException {
+        if (parser.currentToken() == JsonToken.VALUE_STRING) {
+          return ZonedDateTime.parse(parser.getText());
+        } else {
+          throw new JsonParseException(parser, "Expected zoned date time as string, found " + parser.currentToken());
+        }
+      }
+    });
+    module.addSerializer(YearMonth.class, new JsonSerializer<YearMonth>() {
+      @Override
+      public void serialize(final YearMonth date, final JsonGenerator gen, final SerializerProvider sp)
+              throws IOException {
+        gen.writeString(date.toString());
+      }
+    });
+    module.addDeserializer(YearMonth.class, new JsonDeserializer<YearMonth>() {
+      @Override
+      public YearMonth deserialize(JsonParser parser, DeserializationContext ctx)
+              throws IOException, JsonProcessingException {
+        if (parser.currentToken() == JsonToken.VALUE_STRING) {
+          return YearMonth.parse(parser.getText());
+        } else {
+          throw new JsonParseException(parser, "Expected zoned date time as string, found " + parser.currentToken());
+        }
+      }
+    });
+    module.addSerializer(Year.class, new JsonSerializer<Year>() {
+      @Override
+      public void serialize(final Year date, final JsonGenerator gen, final SerializerProvider sp)
+              throws IOException {
+        gen.writeNumber(date.getValue());
+      }
+    });
+    module.addDeserializer(Year.class, new JsonDeserializer<Year>() {
+      @Override
+      public Year deserialize(JsonParser parser, DeserializationContext ctx)
+              throws IOException, JsonProcessingException {
+        if (parser.currentToken() == JsonToken.VALUE_NUMBER_INT) {
+          return Year.of(parser.getIntValue());
+        } else {
+          throw new JsonParseException(parser, "Expected zoned date time as string, found " + parser.currentToken());
+        }
+      }
+    });
+    return module;
+  }
 
   private final Class<T> clasz;
 
