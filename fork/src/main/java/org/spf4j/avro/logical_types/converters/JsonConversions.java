@@ -2,6 +2,7 @@
 package org.spf4j.avro.logical_types.converters;
 
 
+import com.fasterxml.jackson.core.JsonFactory;
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.core.JsonParser;
@@ -10,6 +11,7 @@ import com.fasterxml.jackson.core.JsonToken;
 import com.fasterxml.jackson.databind.DeserializationContext;
 import com.fasterxml.jackson.databind.JsonDeserializer;
 import com.fasterxml.jackson.databind.JsonSerializer;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializerProvider;
 import com.fasterxml.jackson.databind.module.SimpleModule;
 import java.io.IOException;
@@ -33,16 +35,20 @@ import org.apache.avro.util.ByteArrayBuilder;
 import org.apache.avro.util.CharSequenceReader;
 import org.apache.avro.util.Optional;
 
-/**
- *
- * @author Zoltan Farkas
- */
 class JsonConversions<T> extends Conversion<T> {
 
+  public static final ObjectMapper MAPPER;
 
   static {
     SimpleModule module = newJavaTimeModule();
-    Schema.MAPPER.registerModule(module);
+    ObjectMapper mapper;
+    try {
+      mapper = (ObjectMapper) Schema.class.getField("MAPPER").get(null);
+    } catch (NoSuchFieldException | IllegalAccessException ex) {
+      mapper = new ObjectMapper(new JsonFactory());
+    }
+    mapper.registerModule(module);
+    MAPPER = mapper;
   }
 
   public static SimpleModule newJavaTimeModule() {
@@ -199,7 +205,7 @@ class JsonConversions<T> extends Conversion<T> {
   public ByteBuffer toBytes(T value, Schema schema, LogicalType type) {
     ByteArrayBuilder bab = new ByteArrayBuilder(16);
     try {
-      Schema.MAPPER.writeValue(bab, value);
+      MAPPER.writeValue(bab, value);
     } catch (IOException ex) {
       throw new UncheckedIOException("Cannot serialize " + value, ex);
     }
@@ -210,7 +216,7 @@ class JsonConversions<T> extends Conversion<T> {
   public CharSequence toCharSequence(T value, Schema schema, LogicalType type) {
     StringBuilder sb = new StringBuilder();
     try {
-      Schema.MAPPER.writeValue(new AppendableWriter(sb), value);
+      MAPPER.writeValue(new AppendableWriter(sb), value);
       return sb;
     } catch (IOException ex) {
       throw new UncheckedIOException("Cannot serialize " + value, ex);
@@ -221,13 +227,13 @@ class JsonConversions<T> extends Conversion<T> {
   public T fromBytes(ByteBuffer value, Schema schema, LogicalType type) {
     try {
       if (value.hasArray()) {
-        return Schema.MAPPER.readValue(Schema.FACTORY.createParser(value.array(), value.arrayOffset(),
+        return MAPPER.readValue(Schema.FACTORY.createParser(value.array(), value.arrayOffset(),
                 value.limit() - value.position()), clasz);
       } else {
         byte[] bytes = new byte[value.limit() - value.position()];
         ByteBuffer bb = value.duplicate();
         bb.get(bytes);
-        return Schema.MAPPER.readValue(Schema.FACTORY.createParser(bytes), clasz);
+        return MAPPER.readValue(Schema.FACTORY.createParser(bytes), clasz);
       }
     } catch (IOException ex) {
       throw new UncheckedIOException("Cannot deserialize " + value, ex);
@@ -237,7 +243,7 @@ class JsonConversions<T> extends Conversion<T> {
   @Override
   public T fromCharSequence(CharSequence value, Schema schema, LogicalType type) {
     try {
-      return Schema.MAPPER.readValue(new CharSequenceReader(value), clasz);
+      return MAPPER.readValue(new CharSequenceReader(value), clasz);
     } catch (IOException ex) {
       throw new UncheckedIOException("Cannot deserialize: " + value + ", as " + clasz, ex);
     }

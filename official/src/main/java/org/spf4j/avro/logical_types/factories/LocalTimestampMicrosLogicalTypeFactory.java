@@ -28,7 +28,7 @@ public class LocalTimestampMicrosLogicalTypeFactory implements LogicalTypeFactor
 
   @Override
   public String getTypeName() {
-    return LogicalTypes.localTimestampMicros().getName();
+    return "local-timestamp-micros";
   }
 
   @Override

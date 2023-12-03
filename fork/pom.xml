@@ -20,8 +20,8 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.spf4j</groupId>
-  <artifactId>avro-logical-types-fork</artifactId>
-  <version>1.3-SNAPSHOT</version>
+  <artifactId>avro-logical-types-gen</artifactId>
+  <version>1.3p-SNAPSHOT</version>
   <packaging>jar</packaging>
   <parent>
     <groupId>org.spf4j</groupId>

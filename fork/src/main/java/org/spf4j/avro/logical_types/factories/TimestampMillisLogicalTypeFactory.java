@@ -28,7 +28,7 @@ public class TimestampMillisLogicalTypeFactory implements LogicalTypeFactory {
 
   @Override
   public String getTypeName() {
-    return LogicalTypes.timestampMillis().getName();
+    return "timestamp-millis";
   }
 
   @Override

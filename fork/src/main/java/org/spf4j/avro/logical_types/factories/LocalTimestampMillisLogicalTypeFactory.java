@@ -28,7 +28,7 @@ public class LocalTimestampMillisLogicalTypeFactory implements LogicalTypeFactor
 
   @Override
   public String getTypeName() {
-    return LogicalTypes.localTimestampMillis().getName();
+    return "local-timestamp-millis";
   }
 
   @Override

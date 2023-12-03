@@ -28,7 +28,7 @@ public class UuidLogicalTypeFactory implements LogicalTypeFactory {
 
   @Override
   public String getTypeName() {
-    return LogicalTypes.uuid().getName();
+    return "uuid";
   }
 
   @Override

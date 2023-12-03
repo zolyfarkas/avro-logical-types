@@ -28,7 +28,7 @@ public class TimeMillisLogicalTypeFactory implements LogicalTypeFactory {
 
   @Override
   public String getTypeName() {
-    return LogicalTypes.timeMillis().getName();
+    return "time-millis";
   }
 
   @Override

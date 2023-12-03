@@ -28,7 +28,7 @@ public class TimeMicrosLogicalTypeFactory implements LogicalTypeFactory {
 
   @Override
   public String getTypeName() {
-    return LogicalTypes.timeMicros().getName();
+    return "time-micros";
   }
 
   @Override

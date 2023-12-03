@@ -28,7 +28,7 @@ public class TimestampMicrosLogicalTypeFactory implements LogicalTypeFactory {
 
   @Override
   public String getTypeName() {
-    return LogicalTypes.timestampMicros().getName();
+    return "timestamp-micros";
   }
 
   @Override
