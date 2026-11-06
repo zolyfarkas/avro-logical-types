@@ -9,7 +9,6 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.util.RawValue;
 import com.fasterxml.jackson.databind.util.TokenBuffer;
 import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.StringWriter;
@@ -45,6 +44,7 @@ import org.spf4j.avro.io.JsonExtensionDecoder;
 import org.spf4j.avro.io.JsonExtensionEncoder;
 import org.spf4j.avro.io.ResolvingDecoder;
 import org.spf4j.avro.reflect.ReflectData;
+import org.spf4j.avro.util.NonCopyingByteArrayOutputStream;
 import org.spf4j.avro.logical_types.AnyAvro;
 
 /**
@@ -315,20 +315,23 @@ public class AnyAvroConverter extends Conversion<Object> {
       }
       Map record = new HashMap(4);
       record.put("avsc", toString(avsc, resolver));
-      ByteArrayOutputStream bab = new ByteArrayOutputStream(64);
+      // The nested content is written as JSON text directly into a
+      // StringWriter (the fork wrote into a CharArrayBuilder): no byte
+      // encode/decode round-trip and no array copy on this path.
+      StringWriter sw = new StringWriter(64);
       // The nested content write can itself contain extension values
       // (a nested any, json logical types), which reach
       // JsonExtensionEncoder.writeValue and its codec-requiring
       // JsonGenerator.writeObject; the (Schema, OutputStream) encoder
       // constructor creates a codec-less generator, so supply a generator
       // carrying this module's mapper as its codec instead.
-      JsonGenerator nestedGen = JSON_FACTORY.createGenerator(bab);
+      JsonGenerator nestedGen = JSON_FACTORY.createGenerator(sw);
       nestedGen.setCodec(JsonConversions.MAPPER);
       ExtendedJsonEncoder penc = new ExtendedJsonEncoder(avsc, nestedGen);
       DatumWriter wr = new GenericDatumWriter(avsc);
       wr.write(object, penc);
       penc.flush();
-      record.put("content", new RawValue(new String(bab.toByteArray(), StandardCharsets.UTF_8)));
+      record.put("content", new RawValue(sw.toString()));
       ((JsonExtensionEncoder) enc).writeValue(record, schema);
       return true;
     } else {
@@ -356,7 +359,10 @@ public class AnyAvroConverter extends Conversion<Object> {
               DatumContext.resolveEffectiveSchemaResolver(null, rschema)).rawValue();
       GenericRecord result = new GenericData.Record(rschema);
       result.put(lt.getAvscIdx(), strSchema);
-      ByteArrayOutputStream bos = new ByteArrayOutputStream(64);
+      // NonCopyingByteArrayOutputStream.asByteBuffer() wraps the stream's
+      // own buffer (the fork's ByteArrayBuilder.getBuffer() semantics):
+      // no toByteArray() copy of the serialized content.
+      NonCopyingByteArrayOutputStream bos = new NonCopyingByteArrayOutputStream(64);
       DatumWriter writer = new GenericDatumWriter(schema);
       Encoder encoder = EncoderFactory.get().binaryEncoder(bos, null);
       try {
@@ -365,7 +371,7 @@ public class AnyAvroConverter extends Conversion<Object> {
       } catch (IOException | RuntimeException ex) {
         throw new AvroRuntimeException("Cannot serialize " + value, ex);
       }
-      result.put(lt.getContentIdx(), ByteBuffer.wrap(bos.toByteArray()));
+      result.put(lt.getContentIdx(), bos.asByteBuffer());
       return result;
   }
 
