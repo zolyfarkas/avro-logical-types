@@ -3,12 +3,12 @@ package org.spf4j.avro.logical_types.converters;
 
 import java.time.Instant;
 import java.time.format.DateTimeFormatter;
-import org.apache.avro.Conversion;
-import org.apache.avro.LogicalType;
-import org.apache.avro.Schema;
-import org.apache.avro.generic.GenericData;
-import org.apache.avro.generic.GenericRecord;
-import org.apache.avro.generic.IndexedRecord;
+import org.spf4j.avro.Conversion;
+import org.spf4j.avro.LogicalType;
+import org.spf4j.avro.Schema;
+import org.spf4j.avro.generic.GenericData;
+import org.spf4j.avro.generic.GenericRecord;
+import org.spf4j.avro.generic.IndexedRecord;
 import org.spf4j.avro.logical_types.InstantLogicalType;
 
 /**

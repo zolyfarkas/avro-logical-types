@@ -15,10 +15,10 @@
  */
 package org.spf4j.avro.logical_types;
 
-import org.apache.avro.LogicalType;
-import org.apache.avro.Schema;
-import org.apache.avro.SchemaResolver;
-import org.apache.avro.SchemaResolvers;
+import org.spf4j.avro.DatumContext;
+import org.spf4j.avro.LogicalType;
+import org.spf4j.avro.Schema;
+import org.spf4j.avro.SchemaResolver;
 
 /**
  * Decimal represents arbitrary-precision fixed-scale decimal numbers
@@ -30,8 +30,12 @@ public final class SchemaLogicalType extends LogicalType {
   private final String resolvername;
 
   public SchemaLogicalType(final String resolverName) {
+    this(resolverName, null);
+  }
+
+  public SchemaLogicalType(final String resolverName, final SchemaResolver stampedResolver) {
     super("avsc");
-    this.resolver = SchemaResolvers.get(resolverName);
+    this.resolver = stampedResolver;
     this.resolvername = resolverName;
   }
 
@@ -43,7 +47,7 @@ public final class SchemaLogicalType extends LogicalType {
   public Schema addToSchema(Schema schema) {
       super.addToSchema(schema);
       if (resolvername != null) {
-        schema.addProp("resolver", resolvername);
+        schema.addProp(DatumContext.RESOLVER_PROP, resolvername);
       }
       return schema;
   }

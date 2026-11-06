@@ -15,10 +15,10 @@
  */
 package org.spf4j.avro.logical_types.factories;
 
-import org.apache.avro.AvroRuntimeException;
-import org.apache.avro.LogicalType;
-import org.apache.avro.LogicalTypes.LogicalTypeFactory;
-import org.apache.avro.Schema;
+import org.spf4j.avro.AvroRuntimeException;
+import org.spf4j.avro.LogicalType;
+import org.spf4j.avro.LogicalTypes.LogicalTypeFactory;
+import org.spf4j.avro.Schema;
 import org.spf4j.avro.logical_types.SchemaLogicalType;
 
 /**
@@ -37,7 +37,7 @@ public class SchemaLogicalTypeFactory implements LogicalTypeFactory {
   public LogicalType fromSchema(Schema schema) {
     Schema.Type type = schema.getType();
     if (type == Schema.Type.STRING) {
-        return new SchemaLogicalType(schema.getProp("resolver"));
+        return new SchemaLogicalType(schema.getProp("resolver"), schema.getSchemaResolver());
     } else {
        throw new AvroRuntimeException("avsc must be backed by string , not" + type);
     }

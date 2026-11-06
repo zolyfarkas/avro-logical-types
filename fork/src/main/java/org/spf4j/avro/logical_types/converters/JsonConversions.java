@@ -3,6 +3,7 @@ package org.spf4j.avro.logical_types.converters;
 
 
 import com.fasterxml.jackson.core.JsonFactory;
+import com.fasterxml.jackson.core.JsonToken;
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.core.JsonParser;
@@ -23,19 +24,21 @@ import java.time.LocalDate;
 import java.time.Year;
 import java.time.YearMonth;
 import java.time.ZonedDateTime;
-import org.apache.avro.Conversion;
-import org.apache.avro.LogicalType;
-import org.apache.avro.Schema;
-import org.apache.avro.io.Decoder;
-import org.apache.avro.io.Encoder;
-import org.apache.avro.io.JsonExtensionDecoder;
-import org.apache.avro.io.JsonExtensionEncoder;
-import org.apache.avro.util.AppendableWriter;
-import org.apache.avro.util.ByteArrayBuilder;
-import org.apache.avro.util.CharSequenceReader;
-import org.apache.avro.util.Optional;
+import org.spf4j.avro.Conversion;
+import org.spf4j.avro.LogicalType;
+import org.spf4j.avro.Schema;
+import org.spf4j.avro.io.Decoder;
+import org.spf4j.avro.io.Encoder;
+import org.spf4j.avro.io.JsonExtensionDecoder;
+import org.spf4j.avro.io.JsonExtensionEncoder;
+import org.spf4j.avro.logical_types.internal.AppendableWriter;
+import org.spf4j.avro.logical_types.internal.ByteArrayBuilder;
+import org.spf4j.avro.logical_types.internal.CharSequenceReader;
+import java.util.Optional;
 
 class JsonConversions<T> extends Conversion<T> {
+
+  private static final JsonFactory JSON_FACTORY = new JsonFactory();
 
   public static final ObjectMapper MAPPER;
 
@@ -186,7 +189,23 @@ class JsonConversions<T> extends Conversion<T> {
   public Optional<T> tryDirectDecode(Decoder dec, Schema schema) throws IOException {
     if (dec instanceof JsonExtensionDecoder) {
       JsonExtensionDecoder pd = (JsonExtensionDecoder) dec;
-      return Optional.of(pd.readValue(schema, clasz));
+      // The fork implemented this as pd.readValue(schema, clasz), and so
+      // does this: the library's ExtendedJsonDecoder.readValue defect that
+      // once forced a local bufferValue + own-mapper route-around (its
+      // parsers carry no ObjectCodec, so readValueAs always threw) is
+      // fixed in the library — readValue now reads through the decoder's
+      // own mapper, including the classic string form (a VALUE_STRING
+      // whose text is the JSON payload). A ResolvingDecoder whose
+      // underlying decoder is not an extension decoder (binary, stock
+      // JSON) throws UnsupportedOperationException from its extension
+      // check before anything is consumed; declining is safe. (The raw
+      // non-extension decoders never reach here: they are not
+      // JsonExtensionDecoders.)
+      try {
+        return Optional.ofNullable(pd.readValue(schema, clasz));
+      } catch (UnsupportedOperationException ex) {
+        return Optional.empty();
+      }
     } else {
       return Optional.empty();
     }
@@ -227,13 +246,13 @@ class JsonConversions<T> extends Conversion<T> {
   public T fromBytes(ByteBuffer value, Schema schema, LogicalType type) {
     try {
       if (value.hasArray()) {
-        return MAPPER.readValue(Schema.FACTORY.createParser(value.array(), value.arrayOffset(),
+        return MAPPER.readValue(JSON_FACTORY.createParser(value.array(), value.arrayOffset(),
                 value.limit() - value.position()), clasz);
       } else {
         byte[] bytes = new byte[value.limit() - value.position()];
         ByteBuffer bb = value.duplicate();
         bb.get(bytes);
-        return MAPPER.readValue(Schema.FACTORY.createParser(bytes), clasz);
+        return MAPPER.readValue(JSON_FACTORY.createParser(bytes), clasz);
       }
     } catch (IOException ex) {
       throw new UncheckedIOException("Cannot deserialize " + value, ex);

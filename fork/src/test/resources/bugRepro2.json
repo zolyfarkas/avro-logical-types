@@ -1,0 +1,3482 @@
+{
+  "code": 404,
+  "type": "java.util.concurrent.CompletionException",
+  "message": "javax.ws.rs.WebApplicationException: HTTP 404 Not Found",
+  "payload": {
+    "avsc": {
+      "$ref": "org.spf4j.avro:service-schema:1.0.0:6"
+    },
+    "content": {
+      "code": 404,
+      "type": "javax.ws.rs.NotFoundException",
+      "message": "HTTP 404 Not Found",
+      "detail": {
+        "origin": "127.0.0.1/GET/http://localhost:8080/demo/404/flakyHello",
+        "throwable": {
+          "className": "javax.ws.rs.NotFoundException",
+          "message": "HTTP 404 Not Found",
+          "stackTrace": [{
+              "method": {
+                "declaringClass": "org.glassfish.jersey.server.ServerRuntime$1",
+                "name": "run"
+              },
+              "location": {
+                "fileName": "ServerRuntime.java",
+                "lineNumber": 250
+              },
+              "packageInfo": {
+                "url": "file:/Users/zoly/.m2/repository/org/glassfish/jersey/core/jersey-server/2.28/jersey-server-2.28.jar"
+              }
+            }, {
+              "method": {
+                "declaringClass": "org.glassfish.jersey.internal.Errors$1",
+                "name": "call"
+              },
+              "location": {
+                "fileName": "Errors.java",
+                "lineNumber": 248
+              },
+              "packageInfo": {
+                "url": "file:/Users/zoly/.m2/repository/org/glassfish/jersey/core/jersey-common/2.28/jersey-common-2.28.jar"
+              }
+            }, {
+              "method": {
+                "declaringClass": "org.glassfish.jersey.internal.Errors$1",
+                "name": "call"
+              },
+              "location": {
+                "fileName": "Errors.java",
+                "lineNumber": 244
+              },
+              "packageInfo": {
+                "url": "file:/Users/zoly/.m2/repository/org/glassfish/jersey/core/jersey-common/2.28/jersey-common-2.28.jar"
+              }
+            }, {
+              "method": {
+                "declaringClass": "org.glassfish.jersey.internal.Errors",
+                "name": "process"
+              },
+              "location": {
+                "fileName": "Errors.java",
+                "lineNumber": 292
+              },
+              "packageInfo": {
+                "url": "file:/Users/zoly/.m2/repository/org/glassfish/jersey/core/jersey-common/2.28/jersey-common-2.28.jar"
+              }
+            }, {
+              "method": {
+                "declaringClass": "org.glassfish.jersey.internal.Errors",
+                "name": "process"
+              },
+              "location": {
+                "fileName": "Errors.java",
+                "lineNumber": 274
+              },
+              "packageInfo": {
+                "url": "file:/Users/zoly/.m2/repository/org/glassfish/jersey/core/jersey-common/2.28/jersey-common-2.28.jar"
+              }
+            }, {
+              "method": {
+                "declaringClass": "org.glassfish.jersey.internal.Errors",
+                "name": "process"
+              },
+              "location": {
+                "fileName": "Errors.java",
+                "lineNumber": 244
+              },
+              "packageInfo": {
+                "url": "file:/Users/zoly/.m2/repository/org/glassfish/jersey/core/jersey-common/2.28/jersey-common-2.28.jar"
+              }
+            }, {
+              "method": {
+                "declaringClass": "org.glassfish.jersey.process.internal.RequestScope",
+                "name": "runInScope"
+              },
+              "location": {
+                "fileName": "RequestScope.java",
+                "lineNumber": 265
+              },
+              "packageInfo": {
+                "url": "file:/Users/zoly/.m2/repository/org/glassfish/jersey/core/jersey-common/2.28/jersey-common-2.28.jar"
+              }
+            }, {
+              "method": {
+                "declaringClass": "org.glassfish.jersey.server.ServerRuntime",
+                "name": "process"
+              },
+              "location": {
+                "fileName": "ServerRuntime.java",
+                "lineNumber": 232
+              },
+              "packageInfo": {
+                "url": "file:/Users/zoly/.m2/repository/org/glassfish/jersey/core/jersey-server/2.28/jersey-server-2.28.jar"
+              }
+            }, {
+              "method": {
+                "declaringClass": "org.glassfish.jersey.server.ApplicationHandler",
+                "name": "handle"
+              },
+              "location": {
+                "fileName": "ApplicationHandler.java",
+                "lineNumber": 679
+              },
+              "packageInfo": {
+                "url": "file:/Users/zoly/.m2/repository/org/glassfish/jersey/core/jersey-server/2.28/jersey-server-2.28.jar"
+              }
+            }, {
+              "method": {
+                "declaringClass": "org.glassfish.jersey.servlet.WebComponent",
+                "name": "serviceImpl"
+              },
+              "location": {
+                "fileName": "WebComponent.java",
+                "lineNumber": 392
+              },
+              "packageInfo": {
+                "url": "file:/Users/zoly/.m2/repository/org/glassfish/jersey/containers/jersey-container-servlet-core/2.28/jersey-container-servlet-core-2.28.jar"
+              }
+            }, {
+              "method": {
+                "declaringClass": "org.glassfish.jersey.servlet.WebComponent",
+                "name": "service"
+              },
+              "location": {
+                "fileName": "WebComponent.java",
+                "lineNumber": 346
+              },
+              "packageInfo": {
+                "url": "file:/Users/zoly/.m2/repository/org/glassfish/jersey/containers/jersey-container-servlet-core/2.28/jersey-container-servlet-core-2.28.jar"
+              }
+            }, {
+              "method": {
+                "declaringClass": "org.glassfish.jersey.servlet.ServletContainer",
+                "name": "service"
+              },
+              "location": {
+                "fileName": "ServletContainer.java",
+                "lineNumber": 365
+              },
+              "packageInfo": {
+                "url": "file:/Users/zoly/.m2/repository/org/glassfish/jersey/containers/jersey-container-servlet-core/2.28/jersey-container-servlet-core-2.28.jar"
+              }
+            }, {
+              "method": {
+                "declaringClass": "org.glassfish.jersey.servlet.ServletContainer",
+                "name": "service"
+              },
+              "location": {
+                "fileName": "ServletContainer.java",
+                "lineNumber": 318
+              },
+              "packageInfo": {
+                "url": "file:/Users/zoly/.m2/repository/org/glassfish/jersey/containers/jersey-container-servlet-core/2.28/jersey-container-servlet-core-2.28.jar"
+              }
+            }, {
+              "method": {
+                "declaringClass": "org.glassfish.jersey.servlet.ServletContainer",
+                "name": "service"
+              },
+              "location": {
+                "fileName": "ServletContainer.java",
+                "lineNumber": 205
+              },
+              "packageInfo": {
+                "url": "file:/Users/zoly/.m2/repository/org/glassfish/jersey/containers/jersey-container-servlet-core/2.28/jersey-container-servlet-core-2.28.jar"
+              }
+            }, {
+              "method": {
+                "declaringClass": "org.glassfish.grizzly.servlet.FilterChainImpl",
+                "name": "doFilter"
+              },
+              "location": {
+                "fileName": "FilterChainImpl.java",
+                "lineNumber": 124
+              },
+              "packageInfo": {
+                "url": "file:/Users/zoly/.m2/repository/org/glassfish/grizzly/grizzly-http-servlet/2.4.4/grizzly-http-servlet-2.4.4.jar"
+              }
+            }, {
+              "method": {
+                "declaringClass": "org.spf4j.servlet.ExecutionContextFilter",
+                "name": "doFilter"
+              },
+              "location": {
+                "fileName": "ExecutionContextFilter.java",
+                "lineNumber": 161
+              },
+              "packageInfo": {
+                "url": "file:/Users/zoly/.m2/repository/org/spf4j/spf4j-jaxrs-server/2.1.6-SNAPSHOT/spf4j-jaxrs-server-2.1.6-SNAPSHOT.jar",
+                "version": "2.1.6-SNAPSHOT"
+              }
+            }, {
+              "method": {
+                "declaringClass": "org.glassfish.grizzly.servlet.FilterChainImpl",
+                "name": "doFilter"
+              },
+              "location": {
+                "fileName": "FilterChainImpl.java",
+                "lineNumber": 114
+              },
+              "packageInfo": {
+                "url": "file:/Users/zoly/.m2/repository/org/glassfish/grizzly/grizzly-http-servlet/2.4.4/grizzly-http-servlet-2.4.4.jar"
+              }
+            }, {
+              "method": {
+                "declaringClass": "org.glassfish.grizzly.servlet.FilterChainImpl",
+                "name": "invokeFilterChain"
+              },
+              "location": {
+                "fileName": "FilterChainImpl.java",
+                "lineNumber": 83
+              },
+              "packageInfo": {
+                "url": "file:/Users/zoly/.m2/repository/org/glassfish/grizzly/grizzly-http-servlet/2.4.4/grizzly-http-servlet-2.4.4.jar"
+              }
+            }, {
+              "method": {
+                "declaringClass": "org.glassfish.grizzly.servlet.ServletHandler",
+                "name": "doServletService"
+              },
+              "location": {
+                "fileName": "ServletHandler.java",
+                "lineNumber": 202
+              },
+              "packageInfo": {
+                "url": "file:/Users/zoly/.m2/repository/org/glassfish/grizzly/grizzly-http-servlet/2.4.4/grizzly-http-servlet-2.4.4.jar"
+              }
+            }, {
+              "method": {
+                "declaringClass": "org.glassfish.grizzly.servlet.ServletHandler",
+                "name": "service"
+              },
+              "location": {
+                "fileName": "ServletHandler.java",
+                "lineNumber": 149
+              },
+              "packageInfo": {
+                "url": "file:/Users/zoly/.m2/repository/org/glassfish/grizzly/grizzly-http-servlet/2.4.4/grizzly-http-servlet-2.4.4.jar"
+              }
+            }, {
+              "method": {
+                "declaringClass": "org.glassfish.grizzly.http.server.HttpHandler$1",
+                "name": "run"
+              },
+              "location": {
+                "fileName": "HttpHandler.java",
+                "lineNumber": 200
+              },
+              "packageInfo": {
+                "url": "file:/Users/zoly/.m2/repository/org/glassfish/grizzly/grizzly-http-server/2.4.4/grizzly-http-server-2.4.4.jar",
+                "version": "2.4.4"
+              }
+            }, {
+              "method": {
+                "declaringClass": "org.spf4j.concurrent.LifoThreadPoolExecutorSQP$QueuedThread",
+                "name": "execute"
+              },
+              "location": {
+                "fileName": "LifoThreadPoolExecutorSQP.java",
+                "lineNumber": 617
+              },
+              "packageInfo": {
+                "url": "file:/Users/zoly/.m2/repository/org/spf4j/spf4j-core/8.6.7-SNAPSHOT/spf4j-core-8.6.7-SNAPSHOT.jar",
+                "version": "8.6.7-SNAPSHOT"
+              }
+            }, {
+              "method": {
+                "declaringClass": "org.spf4j.concurrent.LifoThreadPoolExecutorSQP$QueuedThread",
+                "name": "doRun"
+              },
+              "location": {
+                "fileName": "LifoThreadPoolExecutorSQP.java",
+                "lineNumber": 575
+              },
+              "packageInfo": {
+                "url": "file:/Users/zoly/.m2/repository/org/spf4j/spf4j-core/8.6.7-SNAPSHOT/spf4j-core-8.6.7-SNAPSHOT.jar",
+                "version": "8.6.7-SNAPSHOT"
+              }
+            }, {
+              "method": {
+                "declaringClass": "org.spf4j.concurrent.LifoThreadPoolExecutorSQP$QueuedThread",
+                "name": "run"
+              },
+              "location": {
+                "fileName": "LifoThreadPoolExecutorSQP.java",
+                "lineNumber": 535
+              },
+              "packageInfo": {
+                "url": "file:/Users/zoly/.m2/repository/org/spf4j/spf4j-core/8.6.7-SNAPSHOT/spf4j-core-8.6.7-SNAPSHOT.jar",
+                "version": "8.6.7-SNAPSHOT"
+              }
+            }]
+        },
+        "stackSamples": [{
+            "id": 0,
+            "parentId": -1,
+            "count": 7,
+            "method": {
+              "declaringClass": "42878@ZMacBookPro.local",
+              "name": "ROOT"
+            }
+          }, {
+            "id": 1,
+            "parentId": 0,
+            "count": 7,
+            "method": {
+              "declaringClass": "org.spf4j.concurrent.LifoThreadPoolExecutorSQP$QueuedThread",
+              "name": "run"
+            }
+          }, {
+            "id": 2,
+            "parentId": 1,
+            "count": 7,
+            "method": {
+              "declaringClass": "org.spf4j.concurrent.LifoThreadPoolExecutorSQP$QueuedThread",
+              "name": "doRun"
+            }
+          }, {
+            "id": 3,
+            "parentId": 2,
+            "count": 7,
+            "method": {
+              "declaringClass": "org.spf4j.concurrent.LifoThreadPoolExecutorSQP$QueuedThread",
+              "name": "execute"
+            }
+          }, {
+            "id": 4,
+            "parentId": 3,
+            "count": 7,
+            "method": {
+              "declaringClass": "org.glassfish.grizzly.http.server.HttpHandler$1",
+              "name": "run"
+            }
+          }, {
+            "id": 5,
+            "parentId": 4,
+            "count": 7,
+            "method": {
+              "declaringClass": "org.glassfish.grizzly.servlet.ServletHandler",
+              "name": "service"
+            }
+          }, {
+            "id": 6,
+            "parentId": 5,
+            "count": 7,
+            "method": {
+              "declaringClass": "org.glassfish.grizzly.servlet.ServletHandler",
+              "name": "doServletService"
+            }
+          }, {
+            "id": 7,
+            "parentId": 6,
+            "count": 7,
+            "method": {
+              "declaringClass": "org.glassfish.grizzly.servlet.FilterChainImpl",
+              "name": "invokeFilterChain"
+            }
+          }, {
+            "id": 8,
+            "parentId": 7,
+            "count": 7,
+            "method": {
+              "declaringClass": "org.glassfish.grizzly.servlet.FilterChainImpl",
+              "name": "doFilter"
+            }
+          }, {
+            "id": 9,
+            "parentId": 8,
+            "count": 7,
+            "method": {
+              "declaringClass": "org.spf4j.servlet.ExecutionContextFilter",
+              "name": "doFilter"
+            }
+          }, {
+            "id": 10,
+            "parentId": 9,
+            "count": 7,
+            "method": {
+              "declaringClass": "org.glassfish.grizzly.servlet.FilterChainImpl",
+              "name": "doFilter"
+            }
+          }, {
+            "id": 11,
+            "parentId": 10,
+            "count": 7,
+            "method": {
+              "declaringClass": "org.glassfish.jersey.servlet.ServletContainer",
+              "name": "service"
+            }
+          }, {
+            "id": 12,
+            "parentId": 11,
+            "count": 7,
+            "method": {
+              "declaringClass": "org.glassfish.jersey.servlet.ServletContainer",
+              "name": "service"
+            }
+          }, {
+            "id": 13,
+            "parentId": 12,
+            "count": 7,
+            "method": {
+              "declaringClass": "org.glassfish.jersey.servlet.ServletContainer",
+              "name": "service"
+            }
+          }, {
+            "id": 14,
+            "parentId": 13,
+            "count": 7,
+            "method": {
+              "declaringClass": "org.glassfish.jersey.servlet.WebComponent",
+              "name": "service"
+            }
+          }, {
+            "id": 15,
+            "parentId": 14,
+            "count": 7,
+            "method": {
+              "declaringClass": "org.glassfish.jersey.servlet.WebComponent",
+              "name": "serviceImpl"
+            }
+          }, {
+            "id": 16,
+            "parentId": 15,
+            "count": 6,
+            "method": {
+              "declaringClass": "org.glassfish.jersey.server.ApplicationHandler",
+              "name": "handle"
+            }
+          }, {
+            "id": 17,
+            "parentId": 15,
+            "count": 1,
+            "method": {
+              "declaringClass": "org.glassfish.jersey.servlet.WebComponent",
+              "name": "initContainerRequest"
+            }
+          }, {
+            "id": 18,
+            "parentId": 16,
+            "count": 6,
+            "method": {
+              "declaringClass": "org.glassfish.jersey.server.ServerRuntime",
+              "name": "process"
+            }
+          }, {
+            "id": 19,
+            "parentId": 17,
+            "count": 1,
+            "method": {
+              "declaringClass": "org.glassfish.jersey.servlet.WebComponent",
+              "name": "addRequestHeaders"
+            }
+          }, {
+            "id": 20,
+            "parentId": 18,
+            "count": 6,
+            "method": {
+              "declaringClass": "org.glassfish.jersey.process.internal.RequestScope",
+              "name": "runInScope"
+            }
+          }, {
+            "id": 21,
+            "parentId": 19,
+            "count": 1,
+            "method": {
+              "declaringClass": "org.glassfish.grizzly.http.server.util.Enumerator",
+              "name": "hasMoreElements"
+            }
+          }, {
+            "id": 22,
+            "parentId": 20,
+            "count": 6,
+            "method": {
+              "declaringClass": "org.glassfish.jersey.internal.Errors",
+              "name": "process"
+            }
+          }, {
+            "id": 23,
+            "parentId": 21,
+            "count": 1,
+            "method": {
+              "declaringClass": "org.glassfish.grizzly.http.util.ValuesIterator",
+              "name": "hasNext"
+            }
+          }, {
+            "id": 24,
+            "parentId": 22,
+            "count": 6,
+            "method": {
+              "declaringClass": "org.glassfish.jersey.internal.Errors",
+              "name": "process"
+            }
+          }, {
+            "id": 25,
+            "parentId": 24,
+            "count": 6,
+            "method": {
+              "declaringClass": "org.glassfish.jersey.internal.Errors",
+              "name": "process"
+            }
+          }, {
+            "id": 26,
+            "parentId": 25,
+            "count": 6,
+            "method": {
+              "declaringClass": "org.glassfish.jersey.internal.Errors$1",
+              "name": "call"
+            }
+          }, {
+            "id": 27,
+            "parentId": 26,
+            "count": 6,
+            "method": {
+              "declaringClass": "org.glassfish.jersey.internal.Errors$1",
+              "name": "call"
+            }
+          }, {
+            "id": 28,
+            "parentId": 27,
+            "count": 6,
+            "method": {
+              "declaringClass": "org.glassfish.jersey.server.ServerRuntime$1",
+              "name": "run"
+            }
+          }, {
+            "id": 29,
+            "parentId": 28,
+            "count": 6,
+            "method": {
+              "declaringClass": "org.glassfish.jersey.server.ServerRuntime$Responder",
+              "name": "process"
+            }
+          }, {
+            "id": 30,
+            "parentId": 29,
+            "count": 6,
+            "method": {
+              "declaringClass": "org.glassfish.jersey.server.ServerRuntime$Responder",
+              "name": "mapException"
+            }
+          }, {
+            "id": 31,
+            "parentId": 30,
+            "count": 2,
+            "method": {
+              "declaringClass": "org.glassfish.jersey.internal.ExceptionMapperFactory",
+              "name": "findMapping"
+            }
+          }, {
+            "id": 32,
+            "parentId": 30,
+            "count": 4,
+            "method": {
+              "declaringClass": "org.spf4j.jaxrs.server.providers.LoggingExceptionMapper",
+              "name": "toResponse"
+            }
+          }, {
+            "id": 33,
+            "parentId": 31,
+            "count": 2,
+            "method": {
+              "declaringClass": "org.glassfish.jersey.internal.ExceptionMapperFactory",
+              "name": "find"
+            }
+          }, {
+            "id": 34,
+            "parentId": 32,
+            "count": 1,
+            "method": {
+              "declaringClass": "org.spf4j.base.ExecutionContext",
+              "name": "getDebugDetail"
+            }
+          }, {
+            "id": 35,
+            "parentId": 33,
+            "count": 1,
+            "method": {
+              "declaringClass": "org.glassfish.jersey.internal.ExceptionMapperFactory",
+              "name": "isPreferredCandidate"
+            }
+          }, {
+            "id": 36,
+            "parentId": 33,
+            "count": 1,
+            "method": {
+              "declaringClass": "org.glassfish.jersey.internal.util.collection.Values$LazyValueImpl",
+              "name": "get"
+            }
+          }, {
+            "id": 37,
+            "parentId": 34,
+            "count": 1,
+            "method": {
+              "declaringClass": "java.lang.invoke.MethodHandleNatives",
+              "name": "linkMethodHandleConstant"
+            }
+          }, {
+            "id": 38,
+            "parentId": 35,
+            "count": 1,
+            "method": {
+              "declaringClass": "java.lang.ClassLoader",
+              "name": "loadClass"
+            }
+          }, {
+            "id": 39,
+            "parentId": 36,
+            "count": 1,
+            "method": {
+              "declaringClass": "org.glassfish.jersey.internal.ExceptionMapperFactory$$Lambda$190/0x00000008002e2c40",
+              "name": "get"
+            }
+          }, {
+            "id": 40,
+            "parentId": 37,
+            "count": 1,
+            "method": {
+              "declaringClass": "java.lang.invoke.MethodHandles$Lookup",
+              "name": "linkMethodHandleConstant"
+            }
+          }, {
+            "id": 41,
+            "parentId": 38,
+            "count": 1,
+            "method": {
+              "declaringClass": "jdk.internal.loader.ClassLoaders$AppClassLoader",
+              "name": "loadClass"
+            }
+          }, {
+            "id": 42,
+            "parentId": 39,
+            "count": 1,
+            "method": {
+              "declaringClass": "org.glassfish.jersey.internal.ExceptionMapperFactory",
+              "name": "lambda$createLazyExceptionMappers$1"
+            }
+          }, {
+            "id": 43,
+            "parentId": 40,
+            "count": 1,
+            "method": {
+              "declaringClass": "java.lang.invoke.MethodHandles$Lookup",
+              "name": "canBeCached"
+            }
+          }, {
+            "id": 44,
+            "parentId": 41,
+            "count": 1,
+            "method": {
+              "declaringClass": "jdk.internal.loader.BuiltinClassLoader",
+              "name": "loadClass"
+            }
+          }, {
+            "id": 45,
+            "parentId": 42,
+            "count": 1,
+            "method": {
+              "declaringClass": "org.glassfish.jersey.internal.inject.Providers",
+              "name": "getAllServiceHolders"
+            }
+          }, {
+            "id": 46,
+            "parentId": 44,
+            "count": 1,
+            "method": {
+              "declaringClass": "jdk.internal.loader.BuiltinClassLoader",
+              "name": "loadClassOrNull"
+            }
+          }, {
+            "id": 47,
+            "parentId": 45,
+            "count": 1,
+            "method": {
+              "declaringClass": "org.glassfish.jersey.internal.inject.Providers",
+              "name": "getServiceHolders"
+            }
+          }, {
+            "id": 48,
+            "parentId": 46,
+            "count": 1,
+            "method": {
+              "declaringClass": "jdk.internal.loader.BuiltinClassLoader",
+              "name": "findClassOnClassPathOrNull"
+            }
+          }, {
+            "id": 49,
+            "parentId": 47,
+            "count": 1,
+            "method": {
+              "declaringClass": "org.glassfish.jersey.inject.hk2.ImmediateHk2InjectionManager",
+              "name": "getAllServiceHolders"
+            }
+          }, {
+            "id": 50,
+            "parentId": 48,
+            "count": 1,
+            "method": {
+              "declaringClass": "jdk.internal.loader.URLClassPath",
+              "name": "getResource"
+            }
+          }, {
+            "id": 51,
+            "parentId": 49,
+            "count": 1,
+            "method": {
+              "declaringClass": "org.glassfish.jersey.inject.hk2.AbstractHk2InjectionManager",
+              "name": "getAllServiceHolders"
+            }
+          }, {
+            "id": 52,
+            "parentId": 50,
+            "count": 1,
+            "method": {
+              "declaringClass": "jdk.internal.loader.URLClassPath$FileLoader",
+              "name": "getResource"
+            }
+          }, {
+            "id": 53,
+            "parentId": 51,
+            "count": 1,
+            "method": {
+              "declaringClass": "java.util.stream.ReferencePipeline",
+              "name": "collect"
+            }
+          }, {
+            "id": 54,
+            "parentId": 52,
+            "count": 1,
+            "method": {
+              "declaringClass": "java.io.File",
+              "name": "exists"
+            }
+          }, {
+            "id": 55,
+            "parentId": 53,
+            "count": 1,
+            "method": {
+              "declaringClass": "java.util.stream.AbstractPipeline",
+              "name": "evaluate"
+            }
+          }, {
+            "id": 56,
+            "parentId": 54,
+            "count": 1,
+            "method": {
+              "declaringClass": "java.io.File",
+              "name": "isInvalid"
+            }
+          }, {
+            "id": 57,
+            "parentId": 55,
+            "count": 1,
+            "method": {
+              "declaringClass": "java.util.stream.ReduceOps$ReduceOp",
+              "name": "evaluateSequential"
+            }
+          }, {
+            "id": 58,
+            "parentId": 56,
+            "count": 1,
+            "method": {
+              "declaringClass": "java.lang.String",
+              "name": "indexOf"
+            }
+          }, {
+            "id": 59,
+            "parentId": 57,
+            "count": 1,
+            "method": {
+              "declaringClass": "java.util.stream.AbstractPipeline",
+              "name": "wrapAndCopyInto"
+            }
+          }, {
+            "id": 60,
+            "parentId": 58,
+            "count": 1,
+            "method": {
+              "declaringClass": "java.lang.String",
+              "name": "indexOf"
+            }
+          }, {
+            "id": 61,
+            "parentId": 59,
+            "count": 1,
+            "method": {
+              "declaringClass": "java.util.stream.AbstractPipeline",
+              "name": "copyInto"
+            }
+          }, {
+            "id": 62,
+            "parentId": 60,
+            "count": 1,
+            "method": {
+              "declaringClass": "java.lang.StringLatin1",
+              "name": "indexOf"
+            }
+          }, {
+            "id": 63,
+            "parentId": 61,
+            "count": 1,
+            "method": {
+              "declaringClass": "java.util.LinkedList$LLSpliterator",
+              "name": "forEachRemaining"
+            }
+          }, {
+            "id": 64,
+            "parentId": 63,
+            "count": 1,
+            "method": {
+              "declaringClass": "java.util.stream.ReferencePipeline$3$1",
+              "name": "accept"
+            }
+          }, {
+            "id": 65,
+            "parentId": 64,
+            "count": 1,
+            "method": {
+              "declaringClass": "org.glassfish.jersey.inject.hk2.AbstractHk2InjectionManager$$Lambda$250/0x000000080035d440",
+              "name": "apply"
+            }
+          }, {
+            "id": 66,
+            "parentId": 65,
+            "count": 1,
+            "method": {
+              "declaringClass": "org.glassfish.jersey.inject.hk2.AbstractHk2InjectionManager",
+              "name": "lambda$getAllServiceHolders$0"
+            }
+          }, {
+            "id": 67,
+            "parentId": 66,
+            "count": 1,
+            "method": {
+              "declaringClass": "org.jvnet.hk2.internal.ServiceHandleImpl",
+              "name": "getService"
+            }
+          }, {
+            "id": 68,
+            "parentId": 67,
+            "count": 1,
+            "method": {
+              "declaringClass": "org.jvnet.hk2.internal.ServiceHandleImpl",
+              "name": "getService"
+            }
+          }, {
+            "id": 69,
+            "parentId": 68,
+            "count": 1,
+            "method": {
+              "declaringClass": "org.jvnet.hk2.internal.Utilities",
+              "name": "createService"
+            }
+          }, {
+            "id": 70,
+            "parentId": 69,
+            "count": 1,
+            "method": {
+              "declaringClass": "org.jvnet.hk2.internal.Utilities",
+              "name": "isProxiable"
+            }
+          }, {
+            "id": 71,
+            "parentId": 70,
+            "count": 1,
+            "method": {
+              "declaringClass": "java.lang.Class",
+              "name": "isAnnotationPresent"
+            }
+          }, {
+            "id": 72,
+            "parentId": 71,
+            "count": 1,
+            "method": {
+              "declaringClass": "java.lang.reflect.AnnotatedElement",
+              "name": "isAnnotationPresent"
+            }
+          }, {
+            "id": 73,
+            "parentId": 72,
+            "count": 1,
+            "method": {
+              "declaringClass": "java.lang.Class",
+              "name": "getAnnotation"
+            }
+          }, {
+            "id": 74,
+            "parentId": 73,
+            "count": 1,
+            "method": {
+              "declaringClass": "java.util.LinkedHashMap",
+              "name": "get"
+            }
+          }]
+      }
+    }
+  },
+  "detail": {
+    "origin": "127.0.0.1/org.spf4j.demo.HelloResource$$Lambda$336/0x000000080042d440@52393a6",
+    "logs": [{
+        "trId": "Xao253Gef.19ru.9rssr.0/0/2",
+        "level": "DEBUG",
+        "ts": "2019-04-08T10:47:25.166Z",
+        "logger": "org.spf4j.demo.HelloResource->buggyHelloWorld",
+        "thr": "gz-work-3",
+        "msg": "invoking",
+        "xtra": [{
+            "cancelled": false,
+            "running": false,
+            "done": false,
+            "suspended": false
+          }]
+      }, {
+        "trId": "Xao253Gef.19ru.9rssr.0/0/2",
+        "level": "DEBUG",
+        "ts": "2019-04-08T10:47:25.179Z",
+        "logger": "org.spf4j.jaxrs.client.providers.ExecutionContextClientFilter",
+        "thr": "defExec-2",
+        "msg": "Invoking http://localhost:8080/demo/404/flakyHello",
+        "attrs": {
+          "headers": {
+            "Accept": ["text/plain"],
+            "request-deadline": ["1554720505 168344620"],
+            "request-timeout": ["59989671425 n"],
+            "request-id": ["Xao253Gef.19ru.9rssr.0/0/0"],
+            "Accept-Encoding": ["deflate", "gzip", "x-gzip"],
+            "User-Agent": ["Jersey/2.28 (HttpUrlConnection 11.0.2)"]
+          }
+        }
+      }, {
+        "trId": "Xao253Gef.19ru.9rssr.0/0/2",
+        "level": "DEBUG",
+        "ts": "2019-04-08T10:47:25.180Z",
+        "logger": "org.spf4j.jaxrs.client.providers.ExecutionContextClientFilter",
+        "thr": "defExec-3",
+        "msg": "Invoking http://localhost:8080/demo/404/flakyWorld",
+        "attrs": {
+          "headers": {
+            "Accept": ["text/plain"],
+            "request-deadline": ["1554720505 178480020"],
+            "request-timeout": ["59999480089 n"],
+            "request-id": ["Xao253Gef.19ru.9rssr.0/0/1"],
+            "Accept-Encoding": ["deflate", "gzip", "x-gzip"],
+            "User-Agent": ["Jersey/2.28 (HttpUrlConnection 11.0.2)"]
+          }
+        }
+      }, {
+        "trId": "Xao253Gef.19ru.9rssr.0/0/2",
+        "level": "DEBUG",
+        "ts": "2019-04-08T10:47:25.181Z",
+        "logger": "org.spf4j.demo.HelloResource->buggyHelloWorld",
+        "thr": "gz-work-3",
+        "msg": "returning",
+        "xtra": [null]
+      }, {
+        "trId": "Xao253Gef.19ru.9rssr.0/0/2",
+        "level": "DEBUG",
+        "ts": "2019-04-08T10:47:25.360Z",
+        "logger": "org.spf4j.jaxrs.client.providers.ExecutionContextClientFilter",
+        "thr": "defExec-3",
+        "msg": "Done http://localhost:8080/demo/404/flakyWorld",
+        "attrs": {
+          "execUs": 178603,
+          "httpStatus": 404
+        }
+      }, {
+        "trId": "Xao253Gef.19ru.9rssr.0/0/2",
+        "level": "DEBUG",
+        "ts": "2019-04-08T10:47:25.360Z",
+        "logger": "org.spf4j.jaxrs.client.providers.ExecutionContextClientFilter",
+        "thr": "defExec-2",
+        "msg": "Done http://localhost:8080/demo/404/flakyHello",
+        "attrs": {
+          "execUs": 179182,
+          "httpStatus": 404
+        }
+      }, {
+        "trId": "Xao253Gef.19ru.9rssr.0/0/2",
+        "level": "DEBUG",
+        "ts": "2019-04-08T10:47:25.446Z",
+        "logger": "org.spf4j.demo.HelloResource",
+        "thr": "defExec-3",
+        "msg": "Result received null",
+        "throwable": {
+          "className": "java.util.concurrent.CompletionException",
+          "message": "javax.ws.rs.WebApplicationException: HTTP 404 Not Found",
+          "stackTrace": [{
+              "method": {
+                "declaringClass": "java.util.concurrent.CompletableFuture",
+                "name": "encodeThrowable"
+              },
+              "location": {
+                "fileName": "CompletableFuture.java",
+                "lineNumber": 331
+              },
+              "packageInfo": {}
+            }, {
+              "method": {
+                "declaringClass": "java.util.concurrent.CompletableFuture",
+                "name": "completeThrowable"
+              },
+              "location": {
+                "fileName": "CompletableFuture.java",
+                "lineNumber": 346
+              },
+              "packageInfo": {}
+            }, {
+              "method": {
+                "declaringClass": "java.util.concurrent.CompletableFuture",
+                "name": "biApply"
+              },
+              "location": {
+                "fileName": "CompletableFuture.java",
+                "lineNumber": 1219
+              },
+              "packageInfo": {}
+            }, {
+              "method": {
+                "declaringClass": "java.util.concurrent.CompletableFuture$BiApply",
+                "name": "tryFire"
+              },
+              "location": {
+                "fileName": "CompletableFuture.java",
+                "lineNumber": 1205
+              },
+              "packageInfo": {}
+            }, {
+              "method": {
+                "declaringClass": "java.util.concurrent.CompletableFuture$CoCompletion",
+                "name": "tryFire"
+              },
+              "location": {
+                "fileName": "CompletableFuture.java",
+                "lineNumber": 1144
+              },
+              "packageInfo": {}
+            }, {
+              "method": {
+                "declaringClass": "java.util.concurrent.CompletableFuture",
+                "name": "postComplete"
+              },
+              "location": {
+                "fileName": "CompletableFuture.java",
+                "lineNumber": 506
+              },
+              "packageInfo": {}
+            }, {
+              "method": {
+                "declaringClass": "java.util.concurrent.CompletableFuture",
+                "name": "completeExceptionally"
+              },
+              "location": {
+                "fileName": "CompletableFuture.java",
+                "lineNumber": 2088
+              },
+              "packageInfo": {}
+            }, {
+              "method": {
+                "declaringClass": "org.spf4j.failsafe.concurrent.FailSafeExecutorImpl$2",
+                "name": "accept"
+              },
+              "location": {
+                "fileName": "FailSafeExecutorImpl.java",
+                "lineNumber": 266
+              },
+              "packageInfo": {
+                "url": "file:/Users/zoly/.m2/repository/org/spf4j/spf4j-core/8.6.7-SNAPSHOT/spf4j-core-8.6.7-SNAPSHOT.jar",
+                "version": "8.6.7-SNAPSHOT"
+              }
+            }, {
+              "method": {
+                "declaringClass": "org.spf4j.failsafe.concurrent.FailSafeExecutorImpl$2",
+                "name": "accept"
+              },
+              "location": {
+                "fileName": "FailSafeExecutorImpl.java",
+                "lineNumber": 256
+              },
+              "packageInfo": {
+                "url": "file:/Users/zoly/.m2/repository/org/spf4j/spf4j-core/8.6.7-SNAPSHOT/spf4j-core-8.6.7-SNAPSHOT.jar",
+                "version": "8.6.7-SNAPSHOT"
+              }
+            }, {
+              "method": {
+                "declaringClass": "org.spf4j.failsafe.concurrent.FailSafeExecutorImpl$ConsumableRetryFutureTask",
+                "name": "done"
+              },
+              "location": {
+                "fileName": "FailSafeExecutorImpl.java",
+                "lineNumber": 431
+              },
+              "packageInfo": {
+                "url": "file:/Users/zoly/.m2/repository/org/spf4j/spf4j-core/8.6.7-SNAPSHOT/spf4j-core-8.6.7-SNAPSHOT.jar",
+                "version": "8.6.7-SNAPSHOT"
+              }
+            }, {
+              "method": {
+                "declaringClass": "org.spf4j.failsafe.concurrent.FutureTask",
+                "name": "finishCompletion"
+              },
+              "location": {
+                "fileName": "FutureTask.java",
+                "lineNumber": 389
+              },
+              "packageInfo": {
+                "url": "file:/Users/zoly/.m2/repository/org/spf4j/spf4j-core/8.6.7-SNAPSHOT/spf4j-core-8.6.7-SNAPSHOT.jar",
+                "version": "8.6.7-SNAPSHOT"
+              }
+            }, {
+              "method": {
+                "declaringClass": "org.spf4j.failsafe.concurrent.FutureTask",
+                "name": "setException"
+              },
+              "location": {
+                "fileName": "FutureTask.java",
+                "lineNumber": 243
+              },
+              "packageInfo": {
+                "url": "file:/Users/zoly/.m2/repository/org/spf4j/spf4j-core/8.6.7-SNAPSHOT/spf4j-core-8.6.7-SNAPSHOT.jar",
+                "version": "8.6.7-SNAPSHOT"
+              }
+            }, {
+              "method": {
+                "declaringClass": "org.spf4j.failsafe.concurrent.RetryFutureTask",
+                "name": "setException"
+              },
+              "location": {
+                "fileName": "RetryFutureTask.java",
+                "lineNumber": 131
+              },
+              "packageInfo": {
+                "url": "file:/Users/zoly/.m2/repository/org/spf4j/spf4j-core/8.6.7-SNAPSHOT/spf4j-core-8.6.7-SNAPSHOT.jar",
+                "version": "8.6.7-SNAPSHOT"
+              }
+            }, {
+              "method": {
+                "declaringClass": "org.spf4j.failsafe.concurrent.FutureTask",
+                "name": "run"
+              },
+              "location": {
+                "fileName": "FutureTask.java",
+                "lineNumber": 266
+              },
+              "packageInfo": {
+                "url": "file:/Users/zoly/.m2/repository/org/spf4j/spf4j-core/8.6.7-SNAPSHOT/spf4j-core-8.6.7-SNAPSHOT.jar",
+                "version": "8.6.7-SNAPSHOT"
+              }
+            }, {
+              "method": {
+                "declaringClass": "org.spf4j.concurrent.LifoThreadPoolExecutorSQP$QueuedThread",
+                "name": "execute"
+              },
+              "location": {
+                "fileName": "LifoThreadPoolExecutorSQP.java",
+                "lineNumber": 617
+              },
+              "packageInfo": {
+                "url": "file:/Users/zoly/.m2/repository/org/spf4j/spf4j-core/8.6.7-SNAPSHOT/spf4j-core-8.6.7-SNAPSHOT.jar",
+                "version": "8.6.7-SNAPSHOT"
+              }
+            }, {
+              "method": {
+                "declaringClass": "org.spf4j.concurrent.LifoThreadPoolExecutorSQP$QueuedThread",
+                "name": "run"
+              },
+              "location": {
+                "fileName": "LifoThreadPoolExecutorSQP.java",
+                "lineNumber": 530
+              },
+              "packageInfo": {
+                "url": "file:/Users/zoly/.m2/repository/org/spf4j/spf4j-core/8.6.7-SNAPSHOT/spf4j-core-8.6.7-SNAPSHOT.jar",
+                "version": "8.6.7-SNAPSHOT"
+              }
+            }],
+          "cause": {
+            "className": "javax.ws.rs.WebApplicationException",
+            "message": "HTTP 404 Not Found",
+            "stackTrace": [{
+                "method": {
+                  "declaringClass": "org.glassfish.jersey.client.JerseyInvocation",
+                  "name": "convertToException"
+                },
+                "location": {
+                  "fileName": "JerseyInvocation.java",
+                  "lineNumber": 1062
+                },
+                "packageInfo": {
+                  "url": "file:/Users/zoly/.m2/repository/org/glassfish/jersey/core/jersey-client/2.28/jersey-client-2.28.jar"
+                }
+              }, {
+                "method": {
+                  "declaringClass": "org.glassfish.jersey.client.JerseyInvocation",
+                  "name": "translate"
+                },
+                "location": {
+                  "fileName": "JerseyInvocation.java",
+                  "lineNumber": 859
+                },
+                "packageInfo": {
+                  "url": "file:/Users/zoly/.m2/repository/org/glassfish/jersey/core/jersey-client/2.28/jersey-client-2.28.jar"
+                }
+              }, {
+                "method": {
+                  "declaringClass": "org.glassfish.jersey.client.JerseyInvocation",
+                  "name": "lambda$invoke$1"
+                },
+                "location": {
+                  "fileName": "JerseyInvocation.java",
+                  "lineNumber": 743
+                },
+                "packageInfo": {
+                  "url": "file:/Users/zoly/.m2/repository/org/glassfish/jersey/core/jersey-client/2.28/jersey-client-2.28.jar"
+                }
+              }, {
+                "method": {
+                  "declaringClass": "org.glassfish.jersey.internal.Errors",
+                  "name": "process"
+                },
+                "location": {
+                  "fileName": "Errors.java",
+                  "lineNumber": 292
+                },
+                "packageInfo": {
+                  "url": "file:/Users/zoly/.m2/repository/org/glassfish/jersey/core/jersey-common/2.28/jersey-common-2.28.jar"
+                }
+              }, {
+                "method": {
+                  "declaringClass": "org.glassfish.jersey.internal.Errors",
+                  "name": "process"
+                },
+                "location": {
+                  "fileName": "Errors.java",
+                  "lineNumber": 274
+                },
+                "packageInfo": {
+                  "url": "file:/Users/zoly/.m2/repository/org/glassfish/jersey/core/jersey-common/2.28/jersey-common-2.28.jar"
+                }
+              }, {
+                "method": {
+                  "declaringClass": "org.glassfish.jersey.internal.Errors",
+                  "name": "process"
+                },
+                "location": {
+                  "fileName": "Errors.java",
+                  "lineNumber": 205
+                },
+                "packageInfo": {
+                  "url": "file:/Users/zoly/.m2/repository/org/glassfish/jersey/core/jersey-common/2.28/jersey-common-2.28.jar"
+                }
+              }, {
+                "method": {
+                  "declaringClass": "org.glassfish.jersey.process.internal.RequestScope",
+                  "name": "runInScope"
+                },
+                "location": {
+                  "fileName": "RequestScope.java",
+                  "lineNumber": 390
+                },
+                "packageInfo": {
+                  "url": "file:/Users/zoly/.m2/repository/org/glassfish/jersey/core/jersey-common/2.28/jersey-common-2.28.jar"
+                }
+              }, {
+                "method": {
+                  "declaringClass": "org.glassfish.jersey.client.JerseyInvocation",
+                  "name": "invoke"
+                },
+                "location": {
+                  "fileName": "JerseyInvocation.java",
+                  "lineNumber": 741
+                },
+                "packageInfo": {
+                  "url": "file:/Users/zoly/.m2/repository/org/glassfish/jersey/core/jersey-client/2.28/jersey-client-2.28.jar"
+                }
+              }, {
+                "method": {
+                  "declaringClass": "org.spf4j.jaxrs.client.Spf4jCompletionStageRxInvoker",
+                  "name": "lambda$get$1"
+                },
+                "location": {
+                  "fileName": "Spf4jCompletionStageRxInvoker.java",
+                  "lineNumber": 58
+                },
+                "packageInfo": {
+                  "url": "file:/Users/zoly/.m2/repository/org/spf4j/spf4j-jaxrs-client/2.1.6-SNAPSHOT/spf4j-jaxrs-client-2.1.6-SNAPSHOT.jar",
+                  "version": "2.1.6-SNAPSHOT"
+                }
+              }, {
+                "method": {
+                  "declaringClass": "org.spf4j.jaxrs.client.Spf4jInvocation$InvocationHandler",
+                  "name": "call"
+                },
+                "location": {
+                  "fileName": "Spf4jInvocation.java",
+                  "lineNumber": 163
+                },
+                "packageInfo": {
+                  "url": "file:/Users/zoly/.m2/repository/org/spf4j/spf4j-jaxrs-client/2.1.6-SNAPSHOT/spf4j-jaxrs-client-2.1.6-SNAPSHOT.jar",
+                  "version": "2.1.6-SNAPSHOT"
+                }
+              }, {
+                "method": {
+                  "declaringClass": "org.spf4j.failsafe.concurrent.FutureTask",
+                  "name": "run"
+                },
+                "location": {
+                  "fileName": "FutureTask.java",
+                  "lineNumber": 261
+                },
+                "packageInfo": {
+                  "url": "file:/Users/zoly/.m2/repository/org/spf4j/spf4j-core/8.6.7-SNAPSHOT/spf4j-core-8.6.7-SNAPSHOT.jar",
+                  "version": "8.6.7-SNAPSHOT"
+                }
+              }, {
+                "method": {
+                  "declaringClass": "org.spf4j.concurrent.LifoThreadPoolExecutorSQP$QueuedThread",
+                  "name": "execute"
+                },
+                "location": {
+                  "fileName": "LifoThreadPoolExecutorSQP.java",
+                  "lineNumber": 617
+                },
+                "packageInfo": {
+                  "url": "file:/Users/zoly/.m2/repository/org/spf4j/spf4j-core/8.6.7-SNAPSHOT/spf4j-core-8.6.7-SNAPSHOT.jar",
+                  "version": "8.6.7-SNAPSHOT"
+                }
+              }, {
+                "method": {
+                  "declaringClass": "org.spf4j.concurrent.LifoThreadPoolExecutorSQP$QueuedThread",
+                  "name": "run"
+                },
+                "location": {
+                  "fileName": "LifoThreadPoolExecutorSQP.java",
+                  "lineNumber": 530
+                },
+                "packageInfo": {
+                  "url": "file:/Users/zoly/.m2/repository/org/spf4j/spf4j-core/8.6.7-SNAPSHOT/spf4j-core-8.6.7-SNAPSHOT.jar",
+                  "version": "8.6.7-SNAPSHOT"
+                }
+              }],
+            "cause": {
+              "className": "org.spf4j.base.avro.RemoteException",
+              "message": "javax.ws.rs.NotFoundException@127.0.0.1/GET/http://localhost:8080/demo/404/flakyHello: HTTP 404 Not Found",
+              "stackTrace": [{
+                  "method": {
+                    "declaringClass": "org.glassfish.jersey.server.ServerRuntime$1",
+                    "name": "run"
+                  },
+                  "location": {
+                    "fileName": "ServerRuntime.java",
+                    "lineNumber": 250
+                  },
+                  "packageInfo": {
+                    "url": "file:/Users/zoly/.m2/repository/org/glassfish/jersey/core/jersey-server/2.28/jersey-server-2.28.jar"
+                  }
+                }, {
+                  "method": {
+                    "declaringClass": "org.glassfish.jersey.internal.Errors$1",
+                    "name": "call"
+                  },
+                  "location": {
+                    "fileName": "Errors.java",
+                    "lineNumber": 248
+                  },
+                  "packageInfo": {
+                    "url": "file:/Users/zoly/.m2/repository/org/glassfish/jersey/core/jersey-common/2.28/jersey-common-2.28.jar"
+                  }
+                }, {
+                  "method": {
+                    "declaringClass": "org.glassfish.jersey.internal.Errors$1",
+                    "name": "call"
+                  },
+                  "location": {
+                    "fileName": "Errors.java",
+                    "lineNumber": 244
+                  },
+                  "packageInfo": {
+                    "url": "file:/Users/zoly/.m2/repository/org/glassfish/jersey/core/jersey-common/2.28/jersey-common-2.28.jar"
+                  }
+                }, {
+                  "method": {
+                    "declaringClass": "org.glassfish.jersey.internal.Errors",
+                    "name": "process"
+                  },
+                  "location": {
+                    "fileName": "Errors.java",
+                    "lineNumber": 292
+                  },
+                  "packageInfo": {
+                    "url": "file:/Users/zoly/.m2/repository/org/glassfish/jersey/core/jersey-common/2.28/jersey-common-2.28.jar"
+                  }
+                }, {
+                  "method": {
+                    "declaringClass": "org.glassfish.jersey.internal.Errors",
+                    "name": "process"
+                  },
+                  "location": {
+                    "fileName": "Errors.java",
+                    "lineNumber": 274
+                  },
+                  "packageInfo": {
+                    "url": "file:/Users/zoly/.m2/repository/org/glassfish/jersey/core/jersey-common/2.28/jersey-common-2.28.jar"
+                  }
+                }, {
+                  "method": {
+                    "declaringClass": "org.glassfish.jersey.internal.Errors",
+                    "name": "process"
+                  },
+                  "location": {
+                    "fileName": "Errors.java",
+                    "lineNumber": 244
+                  },
+                  "packageInfo": {
+                    "url": "file:/Users/zoly/.m2/repository/org/glassfish/jersey/core/jersey-common/2.28/jersey-common-2.28.jar"
+                  }
+                }, {
+                  "method": {
+                    "declaringClass": "org.glassfish.jersey.process.internal.RequestScope",
+                    "name": "runInScope"
+                  },
+                  "location": {
+                    "fileName": "RequestScope.java",
+                    "lineNumber": 265
+                  },
+                  "packageInfo": {
+                    "url": "file:/Users/zoly/.m2/repository/org/glassfish/jersey/core/jersey-common/2.28/jersey-common-2.28.jar"
+                  }
+                }, {
+                  "method": {
+                    "declaringClass": "org.glassfish.jersey.server.ServerRuntime",
+                    "name": "process"
+                  },
+                  "location": {
+                    "fileName": "ServerRuntime.java",
+                    "lineNumber": 232
+                  },
+                  "packageInfo": {
+                    "url": "file:/Users/zoly/.m2/repository/org/glassfish/jersey/core/jersey-server/2.28/jersey-server-2.28.jar"
+                  }
+                }, {
+                  "method": {
+                    "declaringClass": "org.glassfish.jersey.server.ApplicationHandler",
+                    "name": "handle"
+                  },
+                  "location": {
+                    "fileName": "ApplicationHandler.java",
+                    "lineNumber": 679
+                  },
+                  "packageInfo": {
+                    "url": "file:/Users/zoly/.m2/repository/org/glassfish/jersey/core/jersey-server/2.28/jersey-server-2.28.jar"
+                  }
+                }, {
+                  "method": {
+                    "declaringClass": "org.glassfish.jersey.servlet.WebComponent",
+                    "name": "serviceImpl"
+                  },
+                  "location": {
+                    "fileName": "WebComponent.java",
+                    "lineNumber": 392
+                  },
+                  "packageInfo": {
+                    "url": "file:/Users/zoly/.m2/repository/org/glassfish/jersey/containers/jersey-container-servlet-core/2.28/jersey-container-servlet-core-2.28.jar"
+                  }
+                }, {
+                  "method": {
+                    "declaringClass": "org.glassfish.jersey.servlet.WebComponent",
+                    "name": "service"
+                  },
+                  "location": {
+                    "fileName": "WebComponent.java",
+                    "lineNumber": 346
+                  },
+                  "packageInfo": {
+                    "url": "file:/Users/zoly/.m2/repository/org/glassfish/jersey/containers/jersey-container-servlet-core/2.28/jersey-container-servlet-core-2.28.jar"
+                  }
+                }, {
+                  "method": {
+                    "declaringClass": "org.glassfish.jersey.servlet.ServletContainer",
+                    "name": "service"
+                  },
+                  "location": {
+                    "fileName": "ServletContainer.java",
+                    "lineNumber": 365
+                  },
+                  "packageInfo": {
+                    "url": "file:/Users/zoly/.m2/repository/org/glassfish/jersey/containers/jersey-container-servlet-core/2.28/jersey-container-servlet-core-2.28.jar"
+                  }
+                }, {
+                  "method": {
+                    "declaringClass": "org.glassfish.jersey.servlet.ServletContainer",
+                    "name": "service"
+                  },
+                  "location": {
+                    "fileName": "ServletContainer.java",
+                    "lineNumber": 318
+                  },
+                  "packageInfo": {
+                    "url": "file:/Users/zoly/.m2/repository/org/glassfish/jersey/containers/jersey-container-servlet-core/2.28/jersey-container-servlet-core-2.28.jar"
+                  }
+                }, {
+                  "method": {
+                    "declaringClass": "org.glassfish.jersey.servlet.ServletContainer",
+                    "name": "service"
+                  },
+                  "location": {
+                    "fileName": "ServletContainer.java",
+                    "lineNumber": 205
+                  },
+                  "packageInfo": {
+                    "url": "file:/Users/zoly/.m2/repository/org/glassfish/jersey/containers/jersey-container-servlet-core/2.28/jersey-container-servlet-core-2.28.jar"
+                  }
+                }, {
+                  "method": {
+                    "declaringClass": "org.glassfish.grizzly.servlet.FilterChainImpl",
+                    "name": "doFilter"
+                  },
+                  "location": {
+                    "fileName": "FilterChainImpl.java",
+                    "lineNumber": 124
+                  },
+                  "packageInfo": {
+                    "url": "file:/Users/zoly/.m2/repository/org/glassfish/grizzly/grizzly-http-servlet/2.4.4/grizzly-http-servlet-2.4.4.jar"
+                  }
+                }, {
+                  "method": {
+                    "declaringClass": "org.spf4j.servlet.ExecutionContextFilter",
+                    "name": "doFilter"
+                  },
+                  "location": {
+                    "fileName": "ExecutionContextFilter.java",
+                    "lineNumber": 161
+                  },
+                  "packageInfo": {
+                    "url": "file:/Users/zoly/.m2/repository/org/spf4j/spf4j-jaxrs-server/2.1.6-SNAPSHOT/spf4j-jaxrs-server-2.1.6-SNAPSHOT.jar",
+                    "version": "2.1.6-SNAPSHOT"
+                  }
+                }, {
+                  "method": {
+                    "declaringClass": "org.glassfish.grizzly.servlet.FilterChainImpl",
+                    "name": "doFilter"
+                  },
+                  "location": {
+                    "fileName": "FilterChainImpl.java",
+                    "lineNumber": 114
+                  },
+                  "packageInfo": {
+                    "url": "file:/Users/zoly/.m2/repository/org/glassfish/grizzly/grizzly-http-servlet/2.4.4/grizzly-http-servlet-2.4.4.jar"
+                  }
+                }, {
+                  "method": {
+                    "declaringClass": "org.glassfish.grizzly.servlet.FilterChainImpl",
+                    "name": "invokeFilterChain"
+                  },
+                  "location": {
+                    "fileName": "FilterChainImpl.java",
+                    "lineNumber": 83
+                  },
+                  "packageInfo": {
+                    "url": "file:/Users/zoly/.m2/repository/org/glassfish/grizzly/grizzly-http-servlet/2.4.4/grizzly-http-servlet-2.4.4.jar"
+                  }
+                }, {
+                  "method": {
+                    "declaringClass": "org.glassfish.grizzly.servlet.ServletHandler",
+                    "name": "doServletService"
+                  },
+                  "location": {
+                    "fileName": "ServletHandler.java",
+                    "lineNumber": 202
+                  },
+                  "packageInfo": {
+                    "url": "file:/Users/zoly/.m2/repository/org/glassfish/grizzly/grizzly-http-servlet/2.4.4/grizzly-http-servlet-2.4.4.jar"
+                  }
+                }, {
+                  "method": {
+                    "declaringClass": "org.glassfish.grizzly.servlet.ServletHandler",
+                    "name": "service"
+                  },
+                  "location": {
+                    "fileName": "ServletHandler.java",
+                    "lineNumber": 149
+                  },
+                  "packageInfo": {
+                    "url": "file:/Users/zoly/.m2/repository/org/glassfish/grizzly/grizzly-http-servlet/2.4.4/grizzly-http-servlet-2.4.4.jar"
+                  }
+                }, {
+                  "method": {
+                    "declaringClass": "org.glassfish.grizzly.http.server.HttpHandler$1",
+                    "name": "run"
+                  },
+                  "location": {
+                    "fileName": "HttpHandler.java",
+                    "lineNumber": 200
+                  },
+                  "packageInfo": {
+                    "url": "file:/Users/zoly/.m2/repository/org/glassfish/grizzly/grizzly-http-server/2.4.4/grizzly-http-server-2.4.4.jar",
+                    "version": "2.4.4"
+                  }
+                }, {
+                  "method": {
+                    "declaringClass": "org.spf4j.concurrent.LifoThreadPoolExecutorSQP$QueuedThread",
+                    "name": "execute"
+                  },
+                  "location": {
+                    "fileName": "LifoThreadPoolExecutorSQP.java",
+                    "lineNumber": 617
+                  },
+                  "packageInfo": {
+                    "url": "file:/Users/zoly/.m2/repository/org/spf4j/spf4j-core/8.6.7-SNAPSHOT/spf4j-core-8.6.7-SNAPSHOT.jar",
+                    "version": "8.6.7-SNAPSHOT"
+                  }
+                }, {
+                  "method": {
+                    "declaringClass": "org.spf4j.concurrent.LifoThreadPoolExecutorSQP$QueuedThread",
+                    "name": "doRun"
+                  },
+                  "location": {
+                    "fileName": "LifoThreadPoolExecutorSQP.java",
+                    "lineNumber": 575
+                  },
+                  "packageInfo": {
+                    "url": "file:/Users/zoly/.m2/repository/org/spf4j/spf4j-core/8.6.7-SNAPSHOT/spf4j-core-8.6.7-SNAPSHOT.jar",
+                    "version": "8.6.7-SNAPSHOT"
+                  }
+                }, {
+                  "method": {
+                    "declaringClass": "org.spf4j.concurrent.LifoThreadPoolExecutorSQP$QueuedThread",
+                    "name": "run"
+                  },
+                  "location": {
+                    "fileName": "LifoThreadPoolExecutorSQP.java",
+                    "lineNumber": 535
+                  },
+                  "packageInfo": {
+                    "url": "file:/Users/zoly/.m2/repository/org/spf4j/spf4j-core/8.6.7-SNAPSHOT/spf4j-core-8.6.7-SNAPSHOT.jar",
+                    "version": "8.6.7-SNAPSHOT"
+                  }
+                }],
+              "cause": {
+                "className": "javax.ws.rs.NotFoundException",
+                "message": "HTTP 404 Not Found",
+                "stackTrace": [{
+                    "method": {
+                      "declaringClass": "org.glassfish.jersey.server.ServerRuntime$1",
+                      "name": "run"
+                    },
+                    "location": {
+                      "fileName": "ServerRuntime.java",
+                      "lineNumber": 250
+                    },
+                    "packageInfo": {
+                      "url": "file:/Users/zoly/.m2/repository/org/glassfish/jersey/core/jersey-server/2.28/jersey-server-2.28.jar"
+                    }
+                  }, {
+                    "method": {
+                      "declaringClass": "org.glassfish.jersey.internal.Errors$1",
+                      "name": "call"
+                    },
+                    "location": {
+                      "fileName": "Errors.java",
+                      "lineNumber": 248
+                    },
+                    "packageInfo": {
+                      "url": "file:/Users/zoly/.m2/repository/org/glassfish/jersey/core/jersey-common/2.28/jersey-common-2.28.jar"
+                    }
+                  }, {
+                    "method": {
+                      "declaringClass": "org.glassfish.jersey.internal.Errors$1",
+                      "name": "call"
+                    },
+                    "location": {
+                      "fileName": "Errors.java",
+                      "lineNumber": 244
+                    },
+                    "packageInfo": {
+                      "url": "file:/Users/zoly/.m2/repository/org/glassfish/jersey/core/jersey-common/2.28/jersey-common-2.28.jar"
+                    }
+                  }, {
+                    "method": {
+                      "declaringClass": "org.glassfish.jersey.internal.Errors",
+                      "name": "process"
+                    },
+                    "location": {
+                      "fileName": "Errors.java",
+                      "lineNumber": 292
+                    },
+                    "packageInfo": {
+                      "url": "file:/Users/zoly/.m2/repository/org/glassfish/jersey/core/jersey-common/2.28/jersey-common-2.28.jar"
+                    }
+                  }, {
+                    "method": {
+                      "declaringClass": "org.glassfish.jersey.internal.Errors",
+                      "name": "process"
+                    },
+                    "location": {
+                      "fileName": "Errors.java",
+                      "lineNumber": 274
+                    },
+                    "packageInfo": {
+                      "url": "file:/Users/zoly/.m2/repository/org/glassfish/jersey/core/jersey-common/2.28/jersey-common-2.28.jar"
+                    }
+                  }, {
+                    "method": {
+                      "declaringClass": "org.glassfish.jersey.internal.Errors",
+                      "name": "process"
+                    },
+                    "location": {
+                      "fileName": "Errors.java",
+                      "lineNumber": 244
+                    },
+                    "packageInfo": {
+                      "url": "file:/Users/zoly/.m2/repository/org/glassfish/jersey/core/jersey-common/2.28/jersey-common-2.28.jar"
+                    }
+                  }, {
+                    "method": {
+                      "declaringClass": "org.glassfish.jersey.process.internal.RequestScope",
+                      "name": "runInScope"
+                    },
+                    "location": {
+                      "fileName": "RequestScope.java",
+                      "lineNumber": 265
+                    },
+                    "packageInfo": {
+                      "url": "file:/Users/zoly/.m2/repository/org/glassfish/jersey/core/jersey-common/2.28/jersey-common-2.28.jar"
+                    }
+                  }, {
+                    "method": {
+                      "declaringClass": "org.glassfish.jersey.server.ServerRuntime",
+                      "name": "process"
+                    },
+                    "location": {
+                      "fileName": "ServerRuntime.java",
+                      "lineNumber": 232
+                    },
+                    "packageInfo": {
+                      "url": "file:/Users/zoly/.m2/repository/org/glassfish/jersey/core/jersey-server/2.28/jersey-server-2.28.jar"
+                    }
+                  }, {
+                    "method": {
+                      "declaringClass": "org.glassfish.jersey.server.ApplicationHandler",
+                      "name": "handle"
+                    },
+                    "location": {
+                      "fileName": "ApplicationHandler.java",
+                      "lineNumber": 679
+                    },
+                    "packageInfo": {
+                      "url": "file:/Users/zoly/.m2/repository/org/glassfish/jersey/core/jersey-server/2.28/jersey-server-2.28.jar"
+                    }
+                  }, {
+                    "method": {
+                      "declaringClass": "org.glassfish.jersey.servlet.WebComponent",
+                      "name": "serviceImpl"
+                    },
+                    "location": {
+                      "fileName": "WebComponent.java",
+                      "lineNumber": 392
+                    },
+                    "packageInfo": {
+                      "url": "file:/Users/zoly/.m2/repository/org/glassfish/jersey/containers/jersey-container-servlet-core/2.28/jersey-container-servlet-core-2.28.jar"
+                    }
+                  }, {
+                    "method": {
+                      "declaringClass": "org.glassfish.jersey.servlet.WebComponent",
+                      "name": "service"
+                    },
+                    "location": {
+                      "fileName": "WebComponent.java",
+                      "lineNumber": 346
+                    },
+                    "packageInfo": {
+                      "url": "file:/Users/zoly/.m2/repository/org/glassfish/jersey/containers/jersey-container-servlet-core/2.28/jersey-container-servlet-core-2.28.jar"
+                    }
+                  }, {
+                    "method": {
+                      "declaringClass": "org.glassfish.jersey.servlet.ServletContainer",
+                      "name": "service"
+                    },
+                    "location": {
+                      "fileName": "ServletContainer.java",
+                      "lineNumber": 365
+                    },
+                    "packageInfo": {
+                      "url": "file:/Users/zoly/.m2/repository/org/glassfish/jersey/containers/jersey-container-servlet-core/2.28/jersey-container-servlet-core-2.28.jar"
+                    }
+                  }, {
+                    "method": {
+                      "declaringClass": "org.glassfish.jersey.servlet.ServletContainer",
+                      "name": "service"
+                    },
+                    "location": {
+                      "fileName": "ServletContainer.java",
+                      "lineNumber": 318
+                    },
+                    "packageInfo": {
+                      "url": "file:/Users/zoly/.m2/repository/org/glassfish/jersey/containers/jersey-container-servlet-core/2.28/jersey-container-servlet-core-2.28.jar"
+                    }
+                  }, {
+                    "method": {
+                      "declaringClass": "org.glassfish.jersey.servlet.ServletContainer",
+                      "name": "service"
+                    },
+                    "location": {
+                      "fileName": "ServletContainer.java",
+                      "lineNumber": 205
+                    },
+                    "packageInfo": {
+                      "url": "file:/Users/zoly/.m2/repository/org/glassfish/jersey/containers/jersey-container-servlet-core/2.28/jersey-container-servlet-core-2.28.jar"
+                    }
+                  }, {
+                    "method": {
+                      "declaringClass": "org.glassfish.grizzly.servlet.FilterChainImpl",
+                      "name": "doFilter"
+                    },
+                    "location": {
+                      "fileName": "FilterChainImpl.java",
+                      "lineNumber": 124
+                    },
+                    "packageInfo": {
+                      "url": "file:/Users/zoly/.m2/repository/org/glassfish/grizzly/grizzly-http-servlet/2.4.4/grizzly-http-servlet-2.4.4.jar"
+                    }
+                  }, {
+                    "method": {
+                      "declaringClass": "org.spf4j.servlet.ExecutionContextFilter",
+                      "name": "doFilter"
+                    },
+                    "location": {
+                      "fileName": "ExecutionContextFilter.java",
+                      "lineNumber": 161
+                    },
+                    "packageInfo": {
+                      "url": "file:/Users/zoly/.m2/repository/org/spf4j/spf4j-jaxrs-server/2.1.6-SNAPSHOT/spf4j-jaxrs-server-2.1.6-SNAPSHOT.jar",
+                      "version": "2.1.6-SNAPSHOT"
+                    }
+                  }, {
+                    "method": {
+                      "declaringClass": "org.glassfish.grizzly.servlet.FilterChainImpl",
+                      "name": "doFilter"
+                    },
+                    "location": {
+                      "fileName": "FilterChainImpl.java",
+                      "lineNumber": 114
+                    },
+                    "packageInfo": {
+                      "url": "file:/Users/zoly/.m2/repository/org/glassfish/grizzly/grizzly-http-servlet/2.4.4/grizzly-http-servlet-2.4.4.jar"
+                    }
+                  }, {
+                    "method": {
+                      "declaringClass": "org.glassfish.grizzly.servlet.FilterChainImpl",
+                      "name": "invokeFilterChain"
+                    },
+                    "location": {
+                      "fileName": "FilterChainImpl.java",
+                      "lineNumber": 83
+                    },
+                    "packageInfo": {
+                      "url": "file:/Users/zoly/.m2/repository/org/glassfish/grizzly/grizzly-http-servlet/2.4.4/grizzly-http-servlet-2.4.4.jar"
+                    }
+                  }, {
+                    "method": {
+                      "declaringClass": "org.glassfish.grizzly.servlet.ServletHandler",
+                      "name": "doServletService"
+                    },
+                    "location": {
+                      "fileName": "ServletHandler.java",
+                      "lineNumber": 202
+                    },
+                    "packageInfo": {
+                      "url": "file:/Users/zoly/.m2/repository/org/glassfish/grizzly/grizzly-http-servlet/2.4.4/grizzly-http-servlet-2.4.4.jar"
+                    }
+                  }, {
+                    "method": {
+                      "declaringClass": "org.glassfish.grizzly.servlet.ServletHandler",
+                      "name": "service"
+                    },
+                    "location": {
+                      "fileName": "ServletHandler.java",
+                      "lineNumber": 149
+                    },
+                    "packageInfo": {
+                      "url": "file:/Users/zoly/.m2/repository/org/glassfish/grizzly/grizzly-http-servlet/2.4.4/grizzly-http-servlet-2.4.4.jar"
+                    }
+                  }, {
+                    "method": {
+                      "declaringClass": "org.glassfish.grizzly.http.server.HttpHandler$1",
+                      "name": "run"
+                    },
+                    "location": {
+                      "fileName": "HttpHandler.java",
+                      "lineNumber": 200
+                    },
+                    "packageInfo": {
+                      "url": "file:/Users/zoly/.m2/repository/org/glassfish/grizzly/grizzly-http-server/2.4.4/grizzly-http-server-2.4.4.jar",
+                      "version": "2.4.4"
+                    }
+                  }, {
+                    "method": {
+                      "declaringClass": "org.spf4j.concurrent.LifoThreadPoolExecutorSQP$QueuedThread",
+                      "name": "execute"
+                    },
+                    "location": {
+                      "fileName": "LifoThreadPoolExecutorSQP.java",
+                      "lineNumber": 617
+                    },
+                    "packageInfo": {
+                      "url": "file:/Users/zoly/.m2/repository/org/spf4j/spf4j-core/8.6.7-SNAPSHOT/spf4j-core-8.6.7-SNAPSHOT.jar",
+                      "version": "8.6.7-SNAPSHOT"
+                    }
+                  }, {
+                    "method": {
+                      "declaringClass": "org.spf4j.concurrent.LifoThreadPoolExecutorSQP$QueuedThread",
+                      "name": "doRun"
+                    },
+                    "location": {
+                      "fileName": "LifoThreadPoolExecutorSQP.java",
+                      "lineNumber": 575
+                    },
+                    "packageInfo": {
+                      "url": "file:/Users/zoly/.m2/repository/org/spf4j/spf4j-core/8.6.7-SNAPSHOT/spf4j-core-8.6.7-SNAPSHOT.jar",
+                      "version": "8.6.7-SNAPSHOT"
+                    }
+                  }, {
+                    "method": {
+                      "declaringClass": "org.spf4j.concurrent.LifoThreadPoolExecutorSQP$QueuedThread",
+                      "name": "run"
+                    },
+                    "location": {
+                      "fileName": "LifoThreadPoolExecutorSQP.java",
+                      "lineNumber": 535
+                    },
+                    "packageInfo": {
+                      "url": "file:/Users/zoly/.m2/repository/org/spf4j/spf4j-core/8.6.7-SNAPSHOT/spf4j-core-8.6.7-SNAPSHOT.jar",
+                      "version": "8.6.7-SNAPSHOT"
+                    }
+                  }]
+              }
+            }
+          }
+        }
+      }],
+    "throwable": {
+      "className": "java.util.concurrent.CompletionException",
+      "message": "javax.ws.rs.WebApplicationException: HTTP 404 Not Found",
+      "stackTrace": [{
+          "method": {
+            "declaringClass": "java.util.concurrent.CompletableFuture",
+            "name": "encodeThrowable"
+          },
+          "location": {
+            "fileName": "CompletableFuture.java",
+            "lineNumber": 331
+          },
+          "packageInfo": {}
+        }, {
+          "method": {
+            "declaringClass": "java.util.concurrent.CompletableFuture",
+            "name": "completeThrowable"
+          },
+          "location": {
+            "fileName": "CompletableFuture.java",
+            "lineNumber": 346
+          },
+          "packageInfo": {}
+        }, {
+          "method": {
+            "declaringClass": "java.util.concurrent.CompletableFuture",
+            "name": "biApply"
+          },
+          "location": {
+            "fileName": "CompletableFuture.java",
+            "lineNumber": 1219
+          },
+          "packageInfo": {}
+        }, {
+          "method": {
+            "declaringClass": "java.util.concurrent.CompletableFuture$BiApply",
+            "name": "tryFire"
+          },
+          "location": {
+            "fileName": "CompletableFuture.java",
+            "lineNumber": 1205
+          },
+          "packageInfo": {}
+        }, {
+          "method": {
+            "declaringClass": "java.util.concurrent.CompletableFuture$CoCompletion",
+            "name": "tryFire"
+          },
+          "location": {
+            "fileName": "CompletableFuture.java",
+            "lineNumber": 1144
+          },
+          "packageInfo": {}
+        }, {
+          "method": {
+            "declaringClass": "java.util.concurrent.CompletableFuture",
+            "name": "postComplete"
+          },
+          "location": {
+            "fileName": "CompletableFuture.java",
+            "lineNumber": 506
+          },
+          "packageInfo": {}
+        }, {
+          "method": {
+            "declaringClass": "java.util.concurrent.CompletableFuture",
+            "name": "completeExceptionally"
+          },
+          "location": {
+            "fileName": "CompletableFuture.java",
+            "lineNumber": 2088
+          },
+          "packageInfo": {}
+        }, {
+          "method": {
+            "declaringClass": "org.spf4j.failsafe.concurrent.FailSafeExecutorImpl$2",
+            "name": "accept"
+          },
+          "location": {
+            "fileName": "FailSafeExecutorImpl.java",
+            "lineNumber": 266
+          },
+          "packageInfo": {
+            "url": "file:/Users/zoly/.m2/repository/org/spf4j/spf4j-core/8.6.7-SNAPSHOT/spf4j-core-8.6.7-SNAPSHOT.jar",
+            "version": "8.6.7-SNAPSHOT"
+          }
+        }, {
+          "method": {
+            "declaringClass": "org.spf4j.failsafe.concurrent.FailSafeExecutorImpl$2",
+            "name": "accept"
+          },
+          "location": {
+            "fileName": "FailSafeExecutorImpl.java",
+            "lineNumber": 256
+          },
+          "packageInfo": {
+            "url": "file:/Users/zoly/.m2/repository/org/spf4j/spf4j-core/8.6.7-SNAPSHOT/spf4j-core-8.6.7-SNAPSHOT.jar",
+            "version": "8.6.7-SNAPSHOT"
+          }
+        }, {
+          "method": {
+            "declaringClass": "org.spf4j.failsafe.concurrent.FailSafeExecutorImpl$ConsumableRetryFutureTask",
+            "name": "done"
+          },
+          "location": {
+            "fileName": "FailSafeExecutorImpl.java",
+            "lineNumber": 431
+          },
+          "packageInfo": {
+            "url": "file:/Users/zoly/.m2/repository/org/spf4j/spf4j-core/8.6.7-SNAPSHOT/spf4j-core-8.6.7-SNAPSHOT.jar",
+            "version": "8.6.7-SNAPSHOT"
+          }
+        }, {
+          "method": {
+            "declaringClass": "org.spf4j.failsafe.concurrent.FutureTask",
+            "name": "finishCompletion"
+          },
+          "location": {
+            "fileName": "FutureTask.java",
+            "lineNumber": 389
+          },
+          "packageInfo": {
+            "url": "file:/Users/zoly/.m2/repository/org/spf4j/spf4j-core/8.6.7-SNAPSHOT/spf4j-core-8.6.7-SNAPSHOT.jar",
+            "version": "8.6.7-SNAPSHOT"
+          }
+        }, {
+          "method": {
+            "declaringClass": "org.spf4j.failsafe.concurrent.FutureTask",
+            "name": "setException"
+          },
+          "location": {
+            "fileName": "FutureTask.java",
+            "lineNumber": 243
+          },
+          "packageInfo": {
+            "url": "file:/Users/zoly/.m2/repository/org/spf4j/spf4j-core/8.6.7-SNAPSHOT/spf4j-core-8.6.7-SNAPSHOT.jar",
+            "version": "8.6.7-SNAPSHOT"
+          }
+        }, {
+          "method": {
+            "declaringClass": "org.spf4j.failsafe.concurrent.RetryFutureTask",
+            "name": "setException"
+          },
+          "location": {
+            "fileName": "RetryFutureTask.java",
+            "lineNumber": 131
+          },
+          "packageInfo": {
+            "url": "file:/Users/zoly/.m2/repository/org/spf4j/spf4j-core/8.6.7-SNAPSHOT/spf4j-core-8.6.7-SNAPSHOT.jar",
+            "version": "8.6.7-SNAPSHOT"
+          }
+        }, {
+          "method": {
+            "declaringClass": "org.spf4j.failsafe.concurrent.FutureTask",
+            "name": "run"
+          },
+          "location": {
+            "fileName": "FutureTask.java",
+            "lineNumber": 266
+          },
+          "packageInfo": {
+            "url": "file:/Users/zoly/.m2/repository/org/spf4j/spf4j-core/8.6.7-SNAPSHOT/spf4j-core-8.6.7-SNAPSHOT.jar",
+            "version": "8.6.7-SNAPSHOT"
+          }
+        }, {
+          "method": {
+            "declaringClass": "org.spf4j.concurrent.LifoThreadPoolExecutorSQP$QueuedThread",
+            "name": "execute"
+          },
+          "location": {
+            "fileName": "LifoThreadPoolExecutorSQP.java",
+            "lineNumber": 617
+          },
+          "packageInfo": {
+            "url": "file:/Users/zoly/.m2/repository/org/spf4j/spf4j-core/8.6.7-SNAPSHOT/spf4j-core-8.6.7-SNAPSHOT.jar",
+            "version": "8.6.7-SNAPSHOT"
+          }
+        }, {
+          "method": {
+            "declaringClass": "org.spf4j.concurrent.LifoThreadPoolExecutorSQP$QueuedThread",
+            "name": "run"
+          },
+          "location": {
+            "fileName": "LifoThreadPoolExecutorSQP.java",
+            "lineNumber": 530
+          },
+          "packageInfo": {
+            "url": "file:/Users/zoly/.m2/repository/org/spf4j/spf4j-core/8.6.7-SNAPSHOT/spf4j-core-8.6.7-SNAPSHOT.jar",
+            "version": "8.6.7-SNAPSHOT"
+          }
+        }],
+      "cause": {
+        "className": "javax.ws.rs.WebApplicationException",
+        "message": "HTTP 404 Not Found",
+        "stackTrace": [{
+            "method": {
+              "declaringClass": "org.glassfish.jersey.client.JerseyInvocation",
+              "name": "convertToException"
+            },
+            "location": {
+              "fileName": "JerseyInvocation.java",
+              "lineNumber": 1062
+            },
+            "packageInfo": {
+              "url": "file:/Users/zoly/.m2/repository/org/glassfish/jersey/core/jersey-client/2.28/jersey-client-2.28.jar"
+            }
+          }, {
+            "method": {
+              "declaringClass": "org.glassfish.jersey.client.JerseyInvocation",
+              "name": "translate"
+            },
+            "location": {
+              "fileName": "JerseyInvocation.java",
+              "lineNumber": 859
+            },
+            "packageInfo": {
+              "url": "file:/Users/zoly/.m2/repository/org/glassfish/jersey/core/jersey-client/2.28/jersey-client-2.28.jar"
+            }
+          }, {
+            "method": {
+              "declaringClass": "org.glassfish.jersey.client.JerseyInvocation",
+              "name": "lambda$invoke$1"
+            },
+            "location": {
+              "fileName": "JerseyInvocation.java",
+              "lineNumber": 743
+            },
+            "packageInfo": {
+              "url": "file:/Users/zoly/.m2/repository/org/glassfish/jersey/core/jersey-client/2.28/jersey-client-2.28.jar"
+            }
+          }, {
+            "method": {
+              "declaringClass": "org.glassfish.jersey.internal.Errors",
+              "name": "process"
+            },
+            "location": {
+              "fileName": "Errors.java",
+              "lineNumber": 292
+            },
+            "packageInfo": {
+              "url": "file:/Users/zoly/.m2/repository/org/glassfish/jersey/core/jersey-common/2.28/jersey-common-2.28.jar"
+            }
+          }, {
+            "method": {
+              "declaringClass": "org.glassfish.jersey.internal.Errors",
+              "name": "process"
+            },
+            "location": {
+              "fileName": "Errors.java",
+              "lineNumber": 274
+            },
+            "packageInfo": {
+              "url": "file:/Users/zoly/.m2/repository/org/glassfish/jersey/core/jersey-common/2.28/jersey-common-2.28.jar"
+            }
+          }, {
+            "method": {
+              "declaringClass": "org.glassfish.jersey.internal.Errors",
+              "name": "process"
+            },
+            "location": {
+              "fileName": "Errors.java",
+              "lineNumber": 205
+            },
+            "packageInfo": {
+              "url": "file:/Users/zoly/.m2/repository/org/glassfish/jersey/core/jersey-common/2.28/jersey-common-2.28.jar"
+            }
+          }, {
+            "method": {
+              "declaringClass": "org.glassfish.jersey.process.internal.RequestScope",
+              "name": "runInScope"
+            },
+            "location": {
+              "fileName": "RequestScope.java",
+              "lineNumber": 390
+            },
+            "packageInfo": {
+              "url": "file:/Users/zoly/.m2/repository/org/glassfish/jersey/core/jersey-common/2.28/jersey-common-2.28.jar"
+            }
+          }, {
+            "method": {
+              "declaringClass": "org.glassfish.jersey.client.JerseyInvocation",
+              "name": "invoke"
+            },
+            "location": {
+              "fileName": "JerseyInvocation.java",
+              "lineNumber": 741
+            },
+            "packageInfo": {
+              "url": "file:/Users/zoly/.m2/repository/org/glassfish/jersey/core/jersey-client/2.28/jersey-client-2.28.jar"
+            }
+          }, {
+            "method": {
+              "declaringClass": "org.spf4j.jaxrs.client.Spf4jCompletionStageRxInvoker",
+              "name": "lambda$get$1"
+            },
+            "location": {
+              "fileName": "Spf4jCompletionStageRxInvoker.java",
+              "lineNumber": 58
+            },
+            "packageInfo": {
+              "url": "file:/Users/zoly/.m2/repository/org/spf4j/spf4j-jaxrs-client/2.1.6-SNAPSHOT/spf4j-jaxrs-client-2.1.6-SNAPSHOT.jar",
+              "version": "2.1.6-SNAPSHOT"
+            }
+          }, {
+            "method": {
+              "declaringClass": "org.spf4j.jaxrs.client.Spf4jInvocation$InvocationHandler",
+              "name": "call"
+            },
+            "location": {
+              "fileName": "Spf4jInvocation.java",
+              "lineNumber": 163
+            },
+            "packageInfo": {
+              "url": "file:/Users/zoly/.m2/repository/org/spf4j/spf4j-jaxrs-client/2.1.6-SNAPSHOT/spf4j-jaxrs-client-2.1.6-SNAPSHOT.jar",
+              "version": "2.1.6-SNAPSHOT"
+            }
+          }, {
+            "method": {
+              "declaringClass": "org.spf4j.failsafe.concurrent.FutureTask",
+              "name": "run"
+            },
+            "location": {
+              "fileName": "FutureTask.java",
+              "lineNumber": 261
+            },
+            "packageInfo": {
+              "url": "file:/Users/zoly/.m2/repository/org/spf4j/spf4j-core/8.6.7-SNAPSHOT/spf4j-core-8.6.7-SNAPSHOT.jar",
+              "version": "8.6.7-SNAPSHOT"
+            }
+          }, {
+            "method": {
+              "declaringClass": "org.spf4j.concurrent.LifoThreadPoolExecutorSQP$QueuedThread",
+              "name": "execute"
+            },
+            "location": {
+              "fileName": "LifoThreadPoolExecutorSQP.java",
+              "lineNumber": 617
+            },
+            "packageInfo": {
+              "url": "file:/Users/zoly/.m2/repository/org/spf4j/spf4j-core/8.6.7-SNAPSHOT/spf4j-core-8.6.7-SNAPSHOT.jar",
+              "version": "8.6.7-SNAPSHOT"
+            }
+          }, {
+            "method": {
+              "declaringClass": "org.spf4j.concurrent.LifoThreadPoolExecutorSQP$QueuedThread",
+              "name": "run"
+            },
+            "location": {
+              "fileName": "LifoThreadPoolExecutorSQP.java",
+              "lineNumber": 530
+            },
+            "packageInfo": {
+              "url": "file:/Users/zoly/.m2/repository/org/spf4j/spf4j-core/8.6.7-SNAPSHOT/spf4j-core-8.6.7-SNAPSHOT.jar",
+              "version": "8.6.7-SNAPSHOT"
+            }
+          }],
+        "cause": {
+          "className": "org.spf4j.base.avro.RemoteException",
+          "message": "javax.ws.rs.NotFoundException@127.0.0.1/GET/http://localhost:8080/demo/404/flakyHello: HTTP 404 Not Found",
+          "stackTrace": [{
+              "method": {
+                "declaringClass": "org.glassfish.jersey.server.ServerRuntime$1",
+                "name": "run"
+              },
+              "location": {
+                "fileName": "ServerRuntime.java",
+                "lineNumber": 250
+              },
+              "packageInfo": {
+                "url": "file:/Users/zoly/.m2/repository/org/glassfish/jersey/core/jersey-server/2.28/jersey-server-2.28.jar"
+              }
+            }, {
+              "method": {
+                "declaringClass": "org.glassfish.jersey.internal.Errors$1",
+                "name": "call"
+              },
+              "location": {
+                "fileName": "Errors.java",
+                "lineNumber": 248
+              },
+              "packageInfo": {
+                "url": "file:/Users/zoly/.m2/repository/org/glassfish/jersey/core/jersey-common/2.28/jersey-common-2.28.jar"
+              }
+            }, {
+              "method": {
+                "declaringClass": "org.glassfish.jersey.internal.Errors$1",
+                "name": "call"
+              },
+              "location": {
+                "fileName": "Errors.java",
+                "lineNumber": 244
+              },
+              "packageInfo": {
+                "url": "file:/Users/zoly/.m2/repository/org/glassfish/jersey/core/jersey-common/2.28/jersey-common-2.28.jar"
+              }
+            }, {
+              "method": {
+                "declaringClass": "org.glassfish.jersey.internal.Errors",
+                "name": "process"
+              },
+              "location": {
+                "fileName": "Errors.java",
+                "lineNumber": 292
+              },
+              "packageInfo": {
+                "url": "file:/Users/zoly/.m2/repository/org/glassfish/jersey/core/jersey-common/2.28/jersey-common-2.28.jar"
+              }
+            }, {
+              "method": {
+                "declaringClass": "org.glassfish.jersey.internal.Errors",
+                "name": "process"
+              },
+              "location": {
+                "fileName": "Errors.java",
+                "lineNumber": 274
+              },
+              "packageInfo": {
+                "url": "file:/Users/zoly/.m2/repository/org/glassfish/jersey/core/jersey-common/2.28/jersey-common-2.28.jar"
+              }
+            }, {
+              "method": {
+                "declaringClass": "org.glassfish.jersey.internal.Errors",
+                "name": "process"
+              },
+              "location": {
+                "fileName": "Errors.java",
+                "lineNumber": 244
+              },
+              "packageInfo": {
+                "url": "file:/Users/zoly/.m2/repository/org/glassfish/jersey/core/jersey-common/2.28/jersey-common-2.28.jar"
+              }
+            }, {
+              "method": {
+                "declaringClass": "org.glassfish.jersey.process.internal.RequestScope",
+                "name": "runInScope"
+              },
+              "location": {
+                "fileName": "RequestScope.java",
+                "lineNumber": 265
+              },
+              "packageInfo": {
+                "url": "file:/Users/zoly/.m2/repository/org/glassfish/jersey/core/jersey-common/2.28/jersey-common-2.28.jar"
+              }
+            }, {
+              "method": {
+                "declaringClass": "org.glassfish.jersey.server.ServerRuntime",
+                "name": "process"
+              },
+              "location": {
+                "fileName": "ServerRuntime.java",
+                "lineNumber": 232
+              },
+              "packageInfo": {
+                "url": "file:/Users/zoly/.m2/repository/org/glassfish/jersey/core/jersey-server/2.28/jersey-server-2.28.jar"
+              }
+            }, {
+              "method": {
+                "declaringClass": "org.glassfish.jersey.server.ApplicationHandler",
+                "name": "handle"
+              },
+              "location": {
+                "fileName": "ApplicationHandler.java",
+                "lineNumber": 679
+              },
+              "packageInfo": {
+                "url": "file:/Users/zoly/.m2/repository/org/glassfish/jersey/core/jersey-server/2.28/jersey-server-2.28.jar"
+              }
+            }, {
+              "method": {
+                "declaringClass": "org.glassfish.jersey.servlet.WebComponent",
+                "name": "serviceImpl"
+              },
+              "location": {
+                "fileName": "WebComponent.java",
+                "lineNumber": 392
+              },
+              "packageInfo": {
+                "url": "file:/Users/zoly/.m2/repository/org/glassfish/jersey/containers/jersey-container-servlet-core/2.28/jersey-container-servlet-core-2.28.jar"
+              }
+            }, {
+              "method": {
+                "declaringClass": "org.glassfish.jersey.servlet.WebComponent",
+                "name": "service"
+              },
+              "location": {
+                "fileName": "WebComponent.java",
+                "lineNumber": 346
+              },
+              "packageInfo": {
+                "url": "file:/Users/zoly/.m2/repository/org/glassfish/jersey/containers/jersey-container-servlet-core/2.28/jersey-container-servlet-core-2.28.jar"
+              }
+            }, {
+              "method": {
+                "declaringClass": "org.glassfish.jersey.servlet.ServletContainer",
+                "name": "service"
+              },
+              "location": {
+                "fileName": "ServletContainer.java",
+                "lineNumber": 365
+              },
+              "packageInfo": {
+                "url": "file:/Users/zoly/.m2/repository/org/glassfish/jersey/containers/jersey-container-servlet-core/2.28/jersey-container-servlet-core-2.28.jar"
+              }
+            }, {
+              "method": {
+                "declaringClass": "org.glassfish.jersey.servlet.ServletContainer",
+                "name": "service"
+              },
+              "location": {
+                "fileName": "ServletContainer.java",
+                "lineNumber": 318
+              },
+              "packageInfo": {
+                "url": "file:/Users/zoly/.m2/repository/org/glassfish/jersey/containers/jersey-container-servlet-core/2.28/jersey-container-servlet-core-2.28.jar"
+              }
+            }, {
+              "method": {
+                "declaringClass": "org.glassfish.jersey.servlet.ServletContainer",
+                "name": "service"
+              },
+              "location": {
+                "fileName": "ServletContainer.java",
+                "lineNumber": 205
+              },
+              "packageInfo": {
+                "url": "file:/Users/zoly/.m2/repository/org/glassfish/jersey/containers/jersey-container-servlet-core/2.28/jersey-container-servlet-core-2.28.jar"
+              }
+            }, {
+              "method": {
+                "declaringClass": "org.glassfish.grizzly.servlet.FilterChainImpl",
+                "name": "doFilter"
+              },
+              "location": {
+                "fileName": "FilterChainImpl.java",
+                "lineNumber": 124
+              },
+              "packageInfo": {
+                "url": "file:/Users/zoly/.m2/repository/org/glassfish/grizzly/grizzly-http-servlet/2.4.4/grizzly-http-servlet-2.4.4.jar"
+              }
+            }, {
+              "method": {
+                "declaringClass": "org.spf4j.servlet.ExecutionContextFilter",
+                "name": "doFilter"
+              },
+              "location": {
+                "fileName": "ExecutionContextFilter.java",
+                "lineNumber": 161
+              },
+              "packageInfo": {
+                "url": "file:/Users/zoly/.m2/repository/org/spf4j/spf4j-jaxrs-server/2.1.6-SNAPSHOT/spf4j-jaxrs-server-2.1.6-SNAPSHOT.jar",
+                "version": "2.1.6-SNAPSHOT"
+              }
+            }, {
+              "method": {
+                "declaringClass": "org.glassfish.grizzly.servlet.FilterChainImpl",
+                "name": "doFilter"
+              },
+              "location": {
+                "fileName": "FilterChainImpl.java",
+                "lineNumber": 114
+              },
+              "packageInfo": {
+                "url": "file:/Users/zoly/.m2/repository/org/glassfish/grizzly/grizzly-http-servlet/2.4.4/grizzly-http-servlet-2.4.4.jar"
+              }
+            }, {
+              "method": {
+                "declaringClass": "org.glassfish.grizzly.servlet.FilterChainImpl",
+                "name": "invokeFilterChain"
+              },
+              "location": {
+                "fileName": "FilterChainImpl.java",
+                "lineNumber": 83
+              },
+              "packageInfo": {
+                "url": "file:/Users/zoly/.m2/repository/org/glassfish/grizzly/grizzly-http-servlet/2.4.4/grizzly-http-servlet-2.4.4.jar"
+              }
+            }, {
+              "method": {
+                "declaringClass": "org.glassfish.grizzly.servlet.ServletHandler",
+                "name": "doServletService"
+              },
+              "location": {
+                "fileName": "ServletHandler.java",
+                "lineNumber": 202
+              },
+              "packageInfo": {
+                "url": "file:/Users/zoly/.m2/repository/org/glassfish/grizzly/grizzly-http-servlet/2.4.4/grizzly-http-servlet-2.4.4.jar"
+              }
+            }, {
+              "method": {
+                "declaringClass": "org.glassfish.grizzly.servlet.ServletHandler",
+                "name": "service"
+              },
+              "location": {
+                "fileName": "ServletHandler.java",
+                "lineNumber": 149
+              },
+              "packageInfo": {
+                "url": "file:/Users/zoly/.m2/repository/org/glassfish/grizzly/grizzly-http-servlet/2.4.4/grizzly-http-servlet-2.4.4.jar"
+              }
+            }, {
+              "method": {
+                "declaringClass": "org.glassfish.grizzly.http.server.HttpHandler$1",
+                "name": "run"
+              },
+              "location": {
+                "fileName": "HttpHandler.java",
+                "lineNumber": 200
+              },
+              "packageInfo": {
+                "url": "file:/Users/zoly/.m2/repository/org/glassfish/grizzly/grizzly-http-server/2.4.4/grizzly-http-server-2.4.4.jar",
+                "version": "2.4.4"
+              }
+            }, {
+              "method": {
+                "declaringClass": "org.spf4j.concurrent.LifoThreadPoolExecutorSQP$QueuedThread",
+                "name": "execute"
+              },
+              "location": {
+                "fileName": "LifoThreadPoolExecutorSQP.java",
+                "lineNumber": 617
+              },
+              "packageInfo": {
+                "url": "file:/Users/zoly/.m2/repository/org/spf4j/spf4j-core/8.6.7-SNAPSHOT/spf4j-core-8.6.7-SNAPSHOT.jar",
+                "version": "8.6.7-SNAPSHOT"
+              }
+            }, {
+              "method": {
+                "declaringClass": "org.spf4j.concurrent.LifoThreadPoolExecutorSQP$QueuedThread",
+                "name": "doRun"
+              },
+              "location": {
+                "fileName": "LifoThreadPoolExecutorSQP.java",
+                "lineNumber": 575
+              },
+              "packageInfo": {
+                "url": "file:/Users/zoly/.m2/repository/org/spf4j/spf4j-core/8.6.7-SNAPSHOT/spf4j-core-8.6.7-SNAPSHOT.jar",
+                "version": "8.6.7-SNAPSHOT"
+              }
+            }, {
+              "method": {
+                "declaringClass": "org.spf4j.concurrent.LifoThreadPoolExecutorSQP$QueuedThread",
+                "name": "run"
+              },
+              "location": {
+                "fileName": "LifoThreadPoolExecutorSQP.java",
+                "lineNumber": 535
+              },
+              "packageInfo": {
+                "url": "file:/Users/zoly/.m2/repository/org/spf4j/spf4j-core/8.6.7-SNAPSHOT/spf4j-core-8.6.7-SNAPSHOT.jar",
+                "version": "8.6.7-SNAPSHOT"
+              }
+            }],
+          "cause": {
+            "className": "javax.ws.rs.NotFoundException",
+            "message": "HTTP 404 Not Found",
+            "stackTrace": [{
+                "method": {
+                  "declaringClass": "org.glassfish.jersey.server.ServerRuntime$1",
+                  "name": "run"
+                },
+                "location": {
+                  "fileName": "ServerRuntime.java",
+                  "lineNumber": 250
+                },
+                "packageInfo": {
+                  "url": "file:/Users/zoly/.m2/repository/org/glassfish/jersey/core/jersey-server/2.28/jersey-server-2.28.jar"
+                }
+              }, {
+                "method": {
+                  "declaringClass": "org.glassfish.jersey.internal.Errors$1",
+                  "name": "call"
+                },
+                "location": {
+                  "fileName": "Errors.java",
+                  "lineNumber": 248
+                },
+                "packageInfo": {
+                  "url": "file:/Users/zoly/.m2/repository/org/glassfish/jersey/core/jersey-common/2.28/jersey-common-2.28.jar"
+                }
+              }, {
+                "method": {
+                  "declaringClass": "org.glassfish.jersey.internal.Errors$1",
+                  "name": "call"
+                },
+                "location": {
+                  "fileName": "Errors.java",
+                  "lineNumber": 244
+                },
+                "packageInfo": {
+                  "url": "file:/Users/zoly/.m2/repository/org/glassfish/jersey/core/jersey-common/2.28/jersey-common-2.28.jar"
+                }
+              }, {
+                "method": {
+                  "declaringClass": "org.glassfish.jersey.internal.Errors",
+                  "name": "process"
+                },
+                "location": {
+                  "fileName": "Errors.java",
+                  "lineNumber": 292
+                },
+                "packageInfo": {
+                  "url": "file:/Users/zoly/.m2/repository/org/glassfish/jersey/core/jersey-common/2.28/jersey-common-2.28.jar"
+                }
+              }, {
+                "method": {
+                  "declaringClass": "org.glassfish.jersey.internal.Errors",
+                  "name": "process"
+                },
+                "location": {
+                  "fileName": "Errors.java",
+                  "lineNumber": 274
+                },
+                "packageInfo": {
+                  "url": "file:/Users/zoly/.m2/repository/org/glassfish/jersey/core/jersey-common/2.28/jersey-common-2.28.jar"
+                }
+              }, {
+                "method": {
+                  "declaringClass": "org.glassfish.jersey.internal.Errors",
+                  "name": "process"
+                },
+                "location": {
+                  "fileName": "Errors.java",
+                  "lineNumber": 244
+                },
+                "packageInfo": {
+                  "url": "file:/Users/zoly/.m2/repository/org/glassfish/jersey/core/jersey-common/2.28/jersey-common-2.28.jar"
+                }
+              }, {
+                "method": {
+                  "declaringClass": "org.glassfish.jersey.process.internal.RequestScope",
+                  "name": "runInScope"
+                },
+                "location": {
+                  "fileName": "RequestScope.java",
+                  "lineNumber": 265
+                },
+                "packageInfo": {
+                  "url": "file:/Users/zoly/.m2/repository/org/glassfish/jersey/core/jersey-common/2.28/jersey-common-2.28.jar"
+                }
+              }, {
+                "method": {
+                  "declaringClass": "org.glassfish.jersey.server.ServerRuntime",
+                  "name": "process"
+                },
+                "location": {
+                  "fileName": "ServerRuntime.java",
+                  "lineNumber": 232
+                },
+                "packageInfo": {
+                  "url": "file:/Users/zoly/.m2/repository/org/glassfish/jersey/core/jersey-server/2.28/jersey-server-2.28.jar"
+                }
+              }, {
+                "method": {
+                  "declaringClass": "org.glassfish.jersey.server.ApplicationHandler",
+                  "name": "handle"
+                },
+                "location": {
+                  "fileName": "ApplicationHandler.java",
+                  "lineNumber": 679
+                },
+                "packageInfo": {
+                  "url": "file:/Users/zoly/.m2/repository/org/glassfish/jersey/core/jersey-server/2.28/jersey-server-2.28.jar"
+                }
+              }, {
+                "method": {
+                  "declaringClass": "org.glassfish.jersey.servlet.WebComponent",
+                  "name": "serviceImpl"
+                },
+                "location": {
+                  "fileName": "WebComponent.java",
+                  "lineNumber": 392
+                },
+                "packageInfo": {
+                  "url": "file:/Users/zoly/.m2/repository/org/glassfish/jersey/containers/jersey-container-servlet-core/2.28/jersey-container-servlet-core-2.28.jar"
+                }
+              }, {
+                "method": {
+                  "declaringClass": "org.glassfish.jersey.servlet.WebComponent",
+                  "name": "service"
+                },
+                "location": {
+                  "fileName": "WebComponent.java",
+                  "lineNumber": 346
+                },
+                "packageInfo": {
+                  "url": "file:/Users/zoly/.m2/repository/org/glassfish/jersey/containers/jersey-container-servlet-core/2.28/jersey-container-servlet-core-2.28.jar"
+                }
+              }, {
+                "method": {
+                  "declaringClass": "org.glassfish.jersey.servlet.ServletContainer",
+                  "name": "service"
+                },
+                "location": {
+                  "fileName": "ServletContainer.java",
+                  "lineNumber": 365
+                },
+                "packageInfo": {
+                  "url": "file:/Users/zoly/.m2/repository/org/glassfish/jersey/containers/jersey-container-servlet-core/2.28/jersey-container-servlet-core-2.28.jar"
+                }
+              }, {
+                "method": {
+                  "declaringClass": "org.glassfish.jersey.servlet.ServletContainer",
+                  "name": "service"
+                },
+                "location": {
+                  "fileName": "ServletContainer.java",
+                  "lineNumber": 318
+                },
+                "packageInfo": {
+                  "url": "file:/Users/zoly/.m2/repository/org/glassfish/jersey/containers/jersey-container-servlet-core/2.28/jersey-container-servlet-core-2.28.jar"
+                }
+              }, {
+                "method": {
+                  "declaringClass": "org.glassfish.jersey.servlet.ServletContainer",
+                  "name": "service"
+                },
+                "location": {
+                  "fileName": "ServletContainer.java",
+                  "lineNumber": 205
+                },
+                "packageInfo": {
+                  "url": "file:/Users/zoly/.m2/repository/org/glassfish/jersey/containers/jersey-container-servlet-core/2.28/jersey-container-servlet-core-2.28.jar"
+                }
+              }, {
+                "method": {
+                  "declaringClass": "org.glassfish.grizzly.servlet.FilterChainImpl",
+                  "name": "doFilter"
+                },
+                "location": {
+                  "fileName": "FilterChainImpl.java",
+                  "lineNumber": 124
+                },
+                "packageInfo": {
+                  "url": "file:/Users/zoly/.m2/repository/org/glassfish/grizzly/grizzly-http-servlet/2.4.4/grizzly-http-servlet-2.4.4.jar"
+                }
+              }, {
+                "method": {
+                  "declaringClass": "org.spf4j.servlet.ExecutionContextFilter",
+                  "name": "doFilter"
+                },
+                "location": {
+                  "fileName": "ExecutionContextFilter.java",
+                  "lineNumber": 161
+                },
+                "packageInfo": {
+                  "url": "file:/Users/zoly/.m2/repository/org/spf4j/spf4j-jaxrs-server/2.1.6-SNAPSHOT/spf4j-jaxrs-server-2.1.6-SNAPSHOT.jar",
+                  "version": "2.1.6-SNAPSHOT"
+                }
+              }, {
+                "method": {
+                  "declaringClass": "org.glassfish.grizzly.servlet.FilterChainImpl",
+                  "name": "doFilter"
+                },
+                "location": {
+                  "fileName": "FilterChainImpl.java",
+                  "lineNumber": 114
+                },
+                "packageInfo": {
+                  "url": "file:/Users/zoly/.m2/repository/org/glassfish/grizzly/grizzly-http-servlet/2.4.4/grizzly-http-servlet-2.4.4.jar"
+                }
+              }, {
+                "method": {
+                  "declaringClass": "org.glassfish.grizzly.servlet.FilterChainImpl",
+                  "name": "invokeFilterChain"
+                },
+                "location": {
+                  "fileName": "FilterChainImpl.java",
+                  "lineNumber": 83
+                },
+                "packageInfo": {
+                  "url": "file:/Users/zoly/.m2/repository/org/glassfish/grizzly/grizzly-http-servlet/2.4.4/grizzly-http-servlet-2.4.4.jar"
+                }
+              }, {
+                "method": {
+                  "declaringClass": "org.glassfish.grizzly.servlet.ServletHandler",
+                  "name": "doServletService"
+                },
+                "location": {
+                  "fileName": "ServletHandler.java",
+                  "lineNumber": 202
+                },
+                "packageInfo": {
+                  "url": "file:/Users/zoly/.m2/repository/org/glassfish/grizzly/grizzly-http-servlet/2.4.4/grizzly-http-servlet-2.4.4.jar"
+                }
+              }, {
+                "method": {
+                  "declaringClass": "org.glassfish.grizzly.servlet.ServletHandler",
+                  "name": "service"
+                },
+                "location": {
+                  "fileName": "ServletHandler.java",
+                  "lineNumber": 149
+                },
+                "packageInfo": {
+                  "url": "file:/Users/zoly/.m2/repository/org/glassfish/grizzly/grizzly-http-servlet/2.4.4/grizzly-http-servlet-2.4.4.jar"
+                }
+              }, {
+                "method": {
+                  "declaringClass": "org.glassfish.grizzly.http.server.HttpHandler$1",
+                  "name": "run"
+                },
+                "location": {
+                  "fileName": "HttpHandler.java",
+                  "lineNumber": 200
+                },
+                "packageInfo": {
+                  "url": "file:/Users/zoly/.m2/repository/org/glassfish/grizzly/grizzly-http-server/2.4.4/grizzly-http-server-2.4.4.jar",
+                  "version": "2.4.4"
+                }
+              }, {
+                "method": {
+                  "declaringClass": "org.spf4j.concurrent.LifoThreadPoolExecutorSQP$QueuedThread",
+                  "name": "execute"
+                },
+                "location": {
+                  "fileName": "LifoThreadPoolExecutorSQP.java",
+                  "lineNumber": 617
+                },
+                "packageInfo": {
+                  "url": "file:/Users/zoly/.m2/repository/org/spf4j/spf4j-core/8.6.7-SNAPSHOT/spf4j-core-8.6.7-SNAPSHOT.jar",
+                  "version": "8.6.7-SNAPSHOT"
+                }
+              }, {
+                "method": {
+                  "declaringClass": "org.spf4j.concurrent.LifoThreadPoolExecutorSQP$QueuedThread",
+                  "name": "doRun"
+                },
+                "location": {
+                  "fileName": "LifoThreadPoolExecutorSQP.java",
+                  "lineNumber": 575
+                },
+                "packageInfo": {
+                  "url": "file:/Users/zoly/.m2/repository/org/spf4j/spf4j-core/8.6.7-SNAPSHOT/spf4j-core-8.6.7-SNAPSHOT.jar",
+                  "version": "8.6.7-SNAPSHOT"
+                }
+              }, {
+                "method": {
+                  "declaringClass": "org.spf4j.concurrent.LifoThreadPoolExecutorSQP$QueuedThread",
+                  "name": "run"
+                },
+                "location": {
+                  "fileName": "LifoThreadPoolExecutorSQP.java",
+                  "lineNumber": 535
+                },
+                "packageInfo": {
+                  "url": "file:/Users/zoly/.m2/repository/org/spf4j/spf4j-core/8.6.7-SNAPSHOT/spf4j-core-8.6.7-SNAPSHOT.jar",
+                  "version": "8.6.7-SNAPSHOT"
+                }
+              }]
+          }
+        }
+      }
+    },
+    "stackSamples": [{
+        "id": 0,
+        "parentId": -1,
+        "count": 2,
+        "method": {
+          "declaringClass": "42878@ZMacBookPro.local",
+          "name": "ROOT"
+        }
+      }, {
+        "id": 1,
+        "parentId": 0,
+        "count": 2,
+        "method": {
+          "declaringClass": "org.spf4j.concurrent.LifoThreadPoolExecutorSQP$QueuedThread",
+          "name": "run"
+        }
+      }, {
+        "id": 2,
+        "parentId": 1,
+        "count": 2,
+        "method": {
+          "declaringClass": "org.spf4j.concurrent.LifoThreadPoolExecutorSQP$QueuedThread",
+          "name": "execute"
+        }
+      }, {
+        "id": 3,
+        "parentId": 2,
+        "count": 2,
+        "method": {
+          "declaringClass": "org.spf4j.failsafe.concurrent.FutureTask",
+          "name": "run"
+        }
+      }, {
+        "id": 4,
+        "parentId": 3,
+        "count": 2,
+        "method": {
+          "declaringClass": "org.spf4j.failsafe.concurrent.RetryFutureTask",
+          "name": "setException"
+        }
+      }, {
+        "id": 5,
+        "parentId": 4,
+        "count": 2,
+        "method": {
+          "declaringClass": "org.spf4j.failsafe.concurrent.FutureTask",
+          "name": "setException"
+        }
+      }, {
+        "id": 6,
+        "parentId": 5,
+        "count": 2,
+        "method": {
+          "declaringClass": "org.spf4j.failsafe.concurrent.FutureTask",
+          "name": "finishCompletion"
+        }
+      }, {
+        "id": 7,
+        "parentId": 6,
+        "count": 2,
+        "method": {
+          "declaringClass": "org.spf4j.failsafe.concurrent.FailSafeExecutorImpl$ConsumableRetryFutureTask",
+          "name": "done"
+        }
+      }, {
+        "id": 8,
+        "parentId": 7,
+        "count": 2,
+        "method": {
+          "declaringClass": "org.spf4j.failsafe.concurrent.FailSafeExecutorImpl$2",
+          "name": "accept"
+        }
+      }, {
+        "id": 9,
+        "parentId": 8,
+        "count": 2,
+        "method": {
+          "declaringClass": "org.spf4j.failsafe.concurrent.FailSafeExecutorImpl$2",
+          "name": "accept"
+        }
+      }, {
+        "id": 10,
+        "parentId": 9,
+        "count": 2,
+        "method": {
+          "declaringClass": "java.util.concurrent.CompletableFuture",
+          "name": "completeExceptionally"
+        }
+      }, {
+        "id": 11,
+        "parentId": 10,
+        "count": 2,
+        "method": {
+          "declaringClass": "java.util.concurrent.CompletableFuture",
+          "name": "postComplete"
+        }
+      }, {
+        "id": 12,
+        "parentId": 11,
+        "count": 2,
+        "method": {
+          "declaringClass": "java.util.concurrent.CompletableFuture$UniWhenComplete",
+          "name": "tryFire"
+        }
+      }, {
+        "id": 13,
+        "parentId": 12,
+        "count": 2,
+        "method": {
+          "declaringClass": "java.util.concurrent.CompletableFuture",
+          "name": "uniWhenComplete"
+        }
+      }, {
+        "id": 14,
+        "parentId": 13,
+        "count": 2,
+        "method": {
+          "declaringClass": "org.spf4j.base.ExecutionContexts$PropagatingBiConsumer",
+          "name": "accept"
+        }
+      }, {
+        "id": 15,
+        "parentId": 14,
+        "count": 2,
+        "method": {
+          "declaringClass": "org.spf4j.demo.HelloResource$$Lambda$336/0x000000080042d440",
+          "name": "accept"
+        }
+      }, {
+        "id": 16,
+        "parentId": 15,
+        "count": 2,
+        "method": {
+          "declaringClass": "org.spf4j.demo.HelloResource",
+          "name": "lambda$buggyHelloWorld$6"
+        }
+      }, {
+        "id": 17,
+        "parentId": 16,
+        "count": 2,
+        "method": {
+          "declaringClass": "org.spf4j.log.ExecContextLogger",
+          "name": "debug"
+        }
+      }, {
+        "id": 18,
+        "parentId": 17,
+        "count": 2,
+        "method": {
+          "declaringClass": "org.spf4j.log.ExecContextLogger",
+          "name": "log"
+        }
+      }, {
+        "id": 19,
+        "parentId": 18,
+        "count": 2,
+        "method": {
+          "declaringClass": "org.spf4j.log.ExecContextLogger",
+          "name": "log"
+        }
+      }, {
+        "id": 20,
+        "parentId": 19,
+        "count": 2,
+        "method": {
+          "declaringClass": "org.spf4j.log.SLf4jXLogAdapter",
+          "name": "log"
+        }
+      }, {
+        "id": 21,
+        "parentId": 20,
+        "count": 2,
+        "method": {
+          "declaringClass": "org.spf4j.test.log.TestLogger",
+          "name": "debug"
+        }
+      }, {
+        "id": 22,
+        "parentId": 21,
+        "count": 2,
+        "method": {
+          "declaringClass": "org.spf4j.test.log.TestLogger",
+          "name": "log"
+        }
+      }, {
+        "id": 23,
+        "parentId": 22,
+        "count": 2,
+        "method": {
+          "declaringClass": "org.spf4j.test.log.CompositeLogHandler",
+          "name": "accept"
+        }
+      }, {
+        "id": 24,
+        "parentId": 23,
+        "count": 2,
+        "method": {
+          "declaringClass": "org.spf4j.test.log.CompositeLogHandler",
+          "name": "accept"
+        }
+      }, {
+        "id": 25,
+        "parentId": 24,
+        "count": 2,
+        "method": {
+          "declaringClass": "org.spf4j.test.log.LogPrinter",
+          "name": "handle"
+        }
+      }, {
+        "id": 26,
+        "parentId": 25,
+        "count": 2,
+        "method": {
+          "declaringClass": "org.spf4j.log.LogPrinter",
+          "name": "print"
+        }
+      }, {
+        "id": 27,
+        "parentId": 26,
+        "count": 2,
+        "method": {
+          "declaringClass": "org.spf4j.log.LogPrinter",
+          "name": "print"
+        }
+      }, {
+        "id": 28,
+        "parentId": 27,
+        "count": 1,
+        "method": {
+          "declaringClass": "org.spf4j.log.LogPrinter",
+          "name": "print"
+        }
+      }, {
+        "id": 29,
+        "parentId": 27,
+        "count": 1,
+        "method": {
+          "declaringClass": "org.spf4j.log.LogPrinter$Buffer",
+          "name": "access$300"
+        }
+      }, {
+        "id": 30,
+        "parentId": 28,
+        "count": 1,
+        "method": {
+          "declaringClass": "org.spf4j.base.Throwables",
+          "name": "writeTo"
+        }
+      }, {
+        "id": 31,
+        "parentId": 29,
+        "count": 1,
+        "method": {
+          "declaringClass": "org.spf4j.log.LogPrinter$Buffer",
+          "name": "flush"
+        }
+      }, {
+        "id": 32,
+        "parentId": 30,
+        "count": 1,
+        "method": {
+          "declaringClass": "org.spf4j.base.Throwables",
+          "name": "writeTo"
+        }
+      }, {
+        "id": 33,
+        "parentId": 31,
+        "count": 1,
+        "method": {
+          "declaringClass": "java.io.BufferedWriter",
+          "name": "flush"
+        }
+      }, {
+        "id": 34,
+        "parentId": 32,
+        "count": 1,
+        "method": {
+          "declaringClass": "org.spf4j.base.Throwables",
+          "name": "writeTo"
+        }
+      }, {
+        "id": 35,
+        "parentId": 33,
+        "count": 1,
+        "method": {
+          "declaringClass": "java.io.BufferedWriter",
+          "name": "flushBuffer"
+        }
+      }, {
+        "id": 36,
+        "parentId": 34,
+        "count": 1,
+        "method": {
+          "declaringClass": "org.spf4j.base.Throwables",
+          "name": "writeThrowableDetail"
+        }
+      }, {
+        "id": 37,
+        "parentId": 35,
+        "count": 1,
+        "method": {
+          "declaringClass": "java.io.OutputStreamWriter",
+          "name": "write"
+        }
+      }, {
+        "id": 38,
+        "parentId": 36,
+        "count": 1,
+        "method": {
+          "declaringClass": "org.spf4j.base.Throwables",
+          "name": "writeTo"
+        }
+      }, {
+        "id": 39,
+        "parentId": 37,
+        "count": 1,
+        "method": {
+          "declaringClass": "sun.nio.cs.StreamEncoder",
+          "name": "write"
+        }
+      }, {
+        "id": 40,
+        "parentId": 38,
+        "count": 1,
+        "method": {
+          "declaringClass": "org.spf4j.base.Throwables",
+          "name": "writeTo"
+        }
+      }, {
+        "id": 41,
+        "parentId": 39,
+        "count": 1,
+        "method": {
+          "declaringClass": "sun.nio.cs.StreamEncoder",
+          "name": "implWrite"
+        }
+      }, {
+        "id": 42,
+        "parentId": 40,
+        "count": 1,
+        "method": {
+          "declaringClass": "org.spf4j.base.PackageInfo",
+          "name": "getPackageInfo"
+        }
+      }, {
+        "id": 43,
+        "parentId": 41,
+        "count": 1,
+        "method": {
+          "declaringClass": "java.nio.CharBuffer",
+          "name": "wrap"
+        }
+      }, {
+        "id": 44,
+        "parentId": 42,
+        "count": 1,
+        "method": {
+          "declaringClass": "com.google.common.cache.LocalCache$LocalLoadingCache",
+          "name": "getUnchecked"
+        }
+      }, {
+        "id": 45,
+        "parentId": 43,
+        "count": 1,
+        "method": {
+          "declaringClass": "java.nio.HeapCharBuffer",
+          "name": "<init>"
+        }
+      }, {
+        "id": 46,
+        "parentId": 44,
+        "count": 1,
+        "method": {
+          "declaringClass": "com.google.common.cache.LocalCache$LocalLoadingCache",
+          "name": "get"
+        }
+      }, {
+        "id": 47,
+        "parentId": 45,
+        "count": 1,
+        "method": {
+          "declaringClass": "java.nio.CharBuffer",
+          "name": "<init>"
+        }
+      }, {
+        "id": 48,
+        "parentId": 46,
+        "count": 1,
+        "method": {
+          "declaringClass": "com.google.common.cache.LocalCache",
+          "name": "getOrLoad"
+        }
+      }, {
+        "id": 49,
+        "parentId": 47,
+        "count": 1,
+        "method": {
+          "declaringClass": "java.nio.Buffer",
+          "name": "<init>"
+        }
+      }, {
+        "id": 50,
+        "parentId": 48,
+        "count": 1,
+        "method": {
+          "declaringClass": "com.google.common.cache.LocalCache",
+          "name": "get"
+        }
+      }, {
+        "id": 51,
+        "parentId": 49,
+        "count": 1,
+        "method": {
+          "declaringClass": "java.nio.CharBuffer",
+          "name": "limit"
+        }
+      }, {
+        "id": 52,
+        "parentId": 50,
+        "count": 1,
+        "method": {
+          "declaringClass": "com.google.common.cache.LocalCache$Segment",
+          "name": "get"
+        }
+      }, {
+        "id": 53,
+        "parentId": 51,
+        "count": 1,
+        "method": {
+          "declaringClass": "java.nio.CharBuffer",
+          "name": "limit"
+        }
+      }, {
+        "id": 54,
+        "parentId": 52,
+        "count": 1,
+        "method": {
+          "declaringClass": "com.google.common.cache.LocalCache$Segment",
+          "name": "lockedGetOrLoad"
+        }
+      }, {
+        "id": 55,
+        "parentId": 54,
+        "count": 1,
+        "method": {
+          "declaringClass": "com.google.common.cache.LocalCache$Segment",
+          "name": "loadSync"
+        }
+      }, {
+        "id": 56,
+        "parentId": 55,
+        "count": 1,
+        "method": {
+          "declaringClass": "com.google.common.cache.LocalCache$LoadingValueReference",
+          "name": "loadFuture"
+        }
+      }, {
+        "id": 57,
+        "parentId": 56,
+        "count": 1,
+        "method": {
+          "declaringClass": "org.spf4j.base.PackageInfo$1",
+          "name": "load"
+        }
+      }, {
+        "id": 58,
+        "parentId": 57,
+        "count": 1,
+        "method": {
+          "declaringClass": "org.spf4j.base.PackageInfo$1",
+          "name": "load"
+        }
+      }, {
+        "id": 59,
+        "parentId": 58,
+        "count": 1,
+        "method": {
+          "declaringClass": "org.spf4j.base.PackageInfo",
+          "name": "getPackageInfoDirect"
+        }
+      }, {
+        "id": 60,
+        "parentId": 59,
+        "count": 1,
+        "method": {
+          "declaringClass": "org.spf4j.base.PackageInfo",
+          "name": "getPackageInfoDirect"
+        }
+      }, {
+        "id": 61,
+        "parentId": 60,
+        "count": 1,
+        "method": {
+          "declaringClass": "java.lang.Class",
+          "name": "getPackage"
+        }
+      }, {
+        "id": 62,
+        "parentId": 61,
+        "count": 1,
+        "method": {
+          "declaringClass": "jdk.internal.loader.BootLoader",
+          "name": "definePackage"
+        }
+      }, {
+        "id": 63,
+        "parentId": 62,
+        "count": 1,
+        "method": {
+          "declaringClass": "jdk.internal.loader.BootLoader",
+          "name": "getDefinedPackage"
+        }
+      }, {
+        "id": 64,
+        "parentId": 63,
+        "count": 1,
+        "method": {
+          "declaringClass": "jdk.internal.loader.BootLoader$PackageHelper",
+          "name": "definePackage"
+        }
+      }, {
+        "id": 65,
+        "parentId": 64,
+        "count": 1,
+        "method": {
+          "declaringClass": "java.lang.System$2",
+          "name": "definePackage"
+        }
+      }, {
+        "id": 66,
+        "parentId": 65,
+        "count": 1,
+        "method": {
+          "declaringClass": "java.lang.ClassLoader",
+          "name": "definePackage"
+        }
+      }, {
+        "id": 67,
+        "parentId": 66,
+        "count": 1,
+        "method": {
+          "declaringClass": "java.lang.invoke.Invokers$Holder",
+          "name": "linkToTargetMethod"
+        }
+      }, {
+        "id": 68,
+        "parentId": 67,
+        "count": 1,
+        "method": {
+          "declaringClass": "java.lang.invoke.DirectMethodHandle$Holder",
+          "name": "invokeStatic"
+        }
+      }, {
+        "id": 69,
+        "parentId": 68,
+        "count": 1,
+        "method": {
+          "declaringClass": "java.lang.ClassLoader$$Lambda$300/0x00000008003e1c40",
+          "name": "get$Lambda"
+        }
+      }, {
+        "id": 70,
+        "parentId": 69,
+        "count": 1,
+        "method": {
+          "declaringClass": "java.lang.ClassLoader$$Lambda$300/0x00000008003e1c40",
+          "name": "<init>"
+        }
+      }]
+  }
+}
