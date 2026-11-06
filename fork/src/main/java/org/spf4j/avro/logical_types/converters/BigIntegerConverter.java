@@ -4,14 +4,14 @@ package org.spf4j.avro.logical_types.converters;
 import java.io.IOException;
 import java.math.BigInteger;
 import java.nio.ByteBuffer;
-import org.apache.avro.Conversion;
-import org.apache.avro.LogicalType;
-import org.apache.avro.Schema;
-import org.apache.avro.io.Decoder;
-import org.apache.avro.io.Encoder;
-import org.apache.avro.io.JsonExtensionDecoder;
-import org.apache.avro.io.JsonExtensionEncoder;
-import org.apache.avro.util.Optional;
+import org.spf4j.avro.Conversion;
+import org.spf4j.avro.LogicalType;
+import org.spf4j.avro.Schema;
+import org.spf4j.avro.io.Decoder;
+import org.spf4j.avro.io.Encoder;
+import org.spf4j.avro.io.JsonExtensionDecoder;
+import org.spf4j.avro.io.JsonExtensionEncoder;
+import java.util.Optional;
 
 /**
  *
@@ -31,7 +31,7 @@ public class BigIntegerConverter extends Conversion<BigInteger> {
 
   public Optional<BigInteger> tryDirectDecode(Decoder dec, Schema schema) throws IOException {
     if (dec instanceof JsonExtensionDecoder) {
-      return Optional.ofNullIsEmpty(((JsonExtensionDecoder) dec).readBigInteger(schema));
+      return Optional.ofNullable(((JsonExtensionDecoder) dec).readBigInteger(schema));
     } else {
       return Optional.empty();
     }

@@ -31,6 +31,16 @@
   <name>${project.artifactId}-${project.version}</name>
   <description>A bunch of additional avro logical types</description>
 
+  <properties>
+    <!-- The standalone org.spf4j.avro library is Java 11 bytecode, so this
+         module can no longer build with the parent pom's JDK 8 defaults
+         (java.version 1.8, java8.home pointing at a macOS JDK 8 install).
+         Build with a JDK 11+ JAVA_HOME; the parent's compiler and surefire
+         forks both take their executable from java8.home. -->
+    <java.version>11</java.version>
+    <java8.home>${env.JAVA_HOME}</java8.home>
+  </properties>
+
   <scm>
     <connection>scm:git:https://github.com/zolyfarkas/avro-logical-types.git</connection>
     <developerConnection>scm:git:https://github.com/zolyfarkas/avro-logical-types.git</developerConnection>
@@ -47,8 +57,8 @@
         <version>1.4.0</version>
         <configuration>
           <services>
-            <param>org.apache.avro.Conversion</param>
-            <param>org.apache.avro.LogicalTypes$LogicalTypeFactory</param>
+            <param>org.spf4j.avro.Conversion</param>
+            <param>org.spf4j.avro.LogicalTypes$LogicalTypeFactory</param>
           </services>
         </configuration>
         <executions>
@@ -60,22 +70,12 @@
           </execution>
         </executions>
       </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-surefire-plugin</artifactId>
-        <configuration>
-          <properties>
-            <property>
-              <name>listener</name>
-              <value>org.spf4j.junit.Spf4jRunListener,org.spf4j.test.log.junit4.DetailOnFailureRunListener</value>
-            </property>
-            <property>
-              <name>spf4j.junit.sampleTimeMillis</name>
-              <value>5</value>
-            </property>
-          </properties>
-        </configuration>
-      </plugin>
+      <!-- The spf4j surefire run listeners (Spf4jRunListener /
+           DetailOnFailureRunListener) are bound to the fork avro
+           (org.apache.avro.specific.SpecificRecordBase), which this module
+           no longer depends on; the listener configuration is dropped so
+           the suite runs on plain surefire against the standalone
+           library. -->
       <!--
       <plugin>
         <groupId>com.github.spotbugs</groupId>
@@ -97,16 +97,19 @@
 </build>
 
   <dependencies>
+    <!-- The previous test-scope spf4j artifacts (spf4j-junit,
+         spf4j-slf4j-test) are bound to the fork avro: their surefire
+         listeners and their slf4j test binder reference
+         org.apache.avro.specific.SpecificRecordBase, and their transitive
+         avro artifacts (spf4j-avro-adapter's lib-ext
+         org.spf4j.avro.SchemaResolver, the previous published
+         avro-logical-types-fork) collide by class name with this module
+         and with the standalone library. Test scope now uses plain junit
+         plus a stock slf4j binder only. -->
     <dependency>
-      <groupId>org.spf4j</groupId>
-      <artifactId>spf4j-slf4j-test</artifactId>
-      <scope>test</scope>
-      <version>8.9.9</version>
-    </dependency>
-    <dependency>
-      <groupId>org.spf4j</groupId>
-      <artifactId>spf4j-junit</artifactId>
-      <version>8.9.9</version>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-simple</artifactId>
+      <version>${slf4j.version}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
@@ -115,9 +118,9 @@
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>org.apache.avro</groupId>
-      <artifactId>avro</artifactId>
-      <version>1.10.0.12p</version>
+      <groupId>org.spf4j.avro</groupId>
+      <artifactId>spf4j-avro</artifactId>
+      <version>1.0.0-SNAPSHOT</version>
     </dependency>
     <dependency>
       <groupId>org.threeten</groupId>

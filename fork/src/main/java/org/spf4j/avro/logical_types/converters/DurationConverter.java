@@ -2,9 +2,9 @@
 package org.spf4j.avro.logical_types.converters;
 
 import java.time.Duration;
-import org.apache.avro.Conversion;
-import org.apache.avro.LogicalType;
-import org.apache.avro.Schema;
+import org.spf4j.avro.Conversion;
+import org.spf4j.avro.LogicalType;
+import org.spf4j.avro.Schema;
 import org.spf4j.avro.logical_types.DurationLogicalType;
 
 /**

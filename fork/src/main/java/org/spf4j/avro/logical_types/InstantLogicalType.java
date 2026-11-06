@@ -17,8 +17,8 @@ package org.spf4j.avro.logical_types;
 
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
-import org.apache.avro.LogicalType;
-import org.apache.avro.Schema;
+import org.spf4j.avro.LogicalType;
+import org.spf4j.avro.Schema;
 
 /**
  * @author Zoltan Farkas

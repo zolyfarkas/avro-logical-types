@@ -15,7 +15,7 @@
  */
 package org.spf4j.avro.logical_types;
 
-import org.apache.avro.LogicalType;
+import org.spf4j.avro.LogicalType;
 
 public final class Temporal extends LogicalType {
 

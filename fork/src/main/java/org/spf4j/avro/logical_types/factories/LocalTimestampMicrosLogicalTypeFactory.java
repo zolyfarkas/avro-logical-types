@@ -15,11 +15,11 @@
  */
 package org.spf4j.avro.logical_types.factories;
 
-import org.apache.avro.AvroRuntimeException;
-import org.apache.avro.LogicalType;
-import org.apache.avro.LogicalTypes;
-import org.apache.avro.LogicalTypes.LogicalTypeFactory;
-import org.apache.avro.Schema;
+import org.spf4j.avro.AvroRuntimeException;
+import org.spf4j.avro.LogicalType;
+import org.spf4j.avro.LogicalTypes;
+import org.spf4j.avro.LogicalTypes.LogicalTypeFactory;
+import org.spf4j.avro.Schema;
 
 /**
  * @author zfarkas

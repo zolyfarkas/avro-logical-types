@@ -11,9 +11,9 @@ import java.time.Year;
 import java.time.YearMonth;
 import java.time.ZonedDateTime;
 import java.time.temporal.Temporal;
-import org.apache.avro.Conversion;
-import org.apache.avro.LogicalType;
-import org.apache.avro.Schema;
+import org.spf4j.avro.Conversion;
+import org.spf4j.avro.LogicalType;
+import org.spf4j.avro.Schema;
 import org.threeten.extra.YearQuarter;
 
 public class TemporalConverter extends Conversion<Temporal> {

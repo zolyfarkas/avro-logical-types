@@ -1,0 +1,78 @@
+[{
+    "name": "ObjectPendingFinalizationCount",
+    "type": "int",
+    "avroSchema" : "int",
+    "description": "ObjectPendingFinalizationCount",
+    "descriptor": {
+      "originalType=int": {
+        "avsc": "null",
+        "content": null
+      },
+      "openType=(javax.management.openmbean.SimpleType(name=java.lang.Integer))": {
+        "avsc": "null",
+        "content": null
+      }
+    }
+  }, {
+    "name": "HeapMemoryUsage",
+    "type": "javax.management.openmbean.CompositeData",
+    "avroSchema" : "int",
+    "description": "HeapMemoryUsage",
+    "descriptor": {
+      "openType=(javax.management.openmbean.CompositeType(name=java.lang.management.MemoryUsage,items=((itemName=committed,itemType=javax.management.openmbean.SimpleType(name=java.lang.Long)),(itemName=init,itemType=javax.management.openmbean.SimpleType(name=java.lang.Long)),(itemName=max,itemType=javax.management.openmbean.SimpleType(name=java.lang.Long)),(itemName=used,itemType=javax.management.openmbean.SimpleType(name=java.lang.Long)))))": {
+        "avsc": "null",
+        "content": null
+      },
+      "originalType=java.lang.management.MemoryUsage": {
+        "avsc": "null",
+        "content": null
+      }
+    }
+  }, {
+    "name": "NonHeapMemoryUsage",
+    "type": "javax.management.openmbean.CompositeData",
+    "avroSchema" : "int",
+    "description": "NonHeapMemoryUsage",
+    "descriptor": {
+      "openType=(javax.management.openmbean.CompositeType(name=java.lang.management.MemoryUsage,items=((itemName=committed,itemType=javax.management.openmbean.SimpleType(name=java.lang.Long)),(itemName=init,itemType=javax.management.openmbean.SimpleType(name=java.lang.Long)),(itemName=max,itemType=javax.management.openmbean.SimpleType(name=java.lang.Long)),(itemName=used,itemType=javax.management.openmbean.SimpleType(name=java.lang.Long)))))": {
+        "avsc": "null",
+        "content": null
+      },
+      "originalType=java.lang.management.MemoryUsage": {
+        "avsc": "null",
+        "content": null
+      }
+    }
+  }, {
+    "name": "Verbose",
+    "type": "boolean",
+    "avroSchema" : "int",
+    "description": "Verbose",
+    "isWriteable": true,
+    "isIs": true,
+    "descriptor": {
+      "openType=(javax.management.openmbean.SimpleType(name=java.lang.Boolean))": {
+        "avsc": "null",
+        "content": null
+      },
+      "originalType=boolean": {
+        "avsc": "null",
+        "content": null
+      }
+    }
+  }, {
+    "name": "ObjectName",
+    "type": "javax.management.ObjectName",
+    "avroSchema" : "int",
+    "description": "ObjectName",
+    "descriptor": {
+      "originalType=javax.management.ObjectName": {
+        "avsc": "null",
+        "content": null
+      },
+      "openType=(javax.management.openmbean.SimpleType(name=javax.management.ObjectName))": {
+        "avsc": "null",
+        "content": null
+      }
+    }
+  }]
